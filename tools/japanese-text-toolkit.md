@@ -8,7 +8,8 @@
 
 **English** | [日本語](#日本語)
 
-Convert Japanese text in bulk — paste texts or point it at a dataset from any other Actor.
+**For data teams, localization and CRM/ERP engineers working with Japanese company names, addresses and documents.**
+Convert text in bulk — paste texts or point it at a dataset from any other Actor. **$0.50 per 1,000 texts.**
 
 | Operation | Example input | Output |
 |---|---|---|
@@ -43,8 +44,14 @@ Or process a field of every item in a dataset: `{ "datasetId": "…", "textField
 }
 ```
 
+## Use cases
+- Add furigana / kana readings to company or customer names for sorting and search
+- Romanize Japanese addresses and names for international systems
+- Convert wareki dates (令和5年, R6.4.15) to ISO dates in forms and filings
+- Normalize full-width / half-width text before deduplication
+
 ## Pricing
-**$0.0005 per text** ($0.50 per 1,000).
+**$0.0005 per text** ($0.50 per 1,000). Empty input runs a free demo.
 
 ## Limitations
 Readings come from a dictionary (Sudachi, core dictionary). Names, rare words and numbers can have
@@ -67,10 +74,13 @@ without macrons (東京 → toukyou).
 
 注意：読みは辞書（Sudachi）にもとづきます。人名・固有名詞・数字は読みが複数ありうるため、一般的な読みになります。
 
-## Related tools
-- [maps-leads-cleaner](https://apify.com/ucchiii/maps-leads-cleaner) — Clean Google Maps leads, then convert Japanese names and addresses here
-- [dataset-dedup-merge](https://apify.com/ucchiii/dataset-dedup-merge) — Merge and dedupe datasets before or after conversion
-- [rss-feed-reader](https://apify.com/ucchiii/rss-feed-reader) — Collect Japanese news feeds for text processing
+<!-- more-tools:start -->
+## More tools from the same developer
+
+- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
+- [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
+<!-- more-tools:end -->
 
 ---
 [All tools](../README.md) · Built and maintained by actor-factory on the Apify Store.
