@@ -5,7 +5,7 @@
 **Paste a list of websites, get a spreadsheet of what each one is built with.** CMS, framework, hosting/CDN, analytics,
 tag managers and ad pixels — one flat row per site, ready for Excel or Google Sheets.
 
-**Try it free:** leave the input empty and press **Start** — you get a demo table in seconds, nothing is charged.
+**Try it:** press **Start** with the two example URLs (2 sites = $0.004), or clear the list for a free demo table (not charged). **$2 per 1,000 sites**; failed or blocked pages are free.
 
 | url | technologyNames | gtmIds |
 |---|---|---|

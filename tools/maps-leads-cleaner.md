@@ -2,6 +2,10 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/maps-leads-cleaner · **Price:** $0.50 per 1,000 leads · free demo with empty input
 
+**What you get:** a deduplicated, CRM-ready lead list: one row per business, phones in E.164, website domains, hours flattened.
+**Input:** pick your Google Maps scraper run in **Google Maps datasets** (the field lists the datasets in your account; no ID to copy).
+**Try it free:** press **Start** with the input empty for a demo on sample data (not charged). After that **$0.50 per 1,000 leads**.
+
 **Already scraped Google Maps? Turn the messy results into a clean lead list you can import into your CRM.**
 This is **not a scraper**: you give it the dataset from your Google Maps scraper run (for example `compass/crawler-google-places`)
 and get back one clean row per business.

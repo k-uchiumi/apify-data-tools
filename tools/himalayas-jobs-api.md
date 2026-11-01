@@ -84,6 +84,7 @@ Himalayas refreshes its data about every 24 hours, so running more than once a d
 
 - [Greenhouse Jobs Scraper](https://apify.com/ucchiii/greenhouse-jobs) — open jobs from any Greenhouse job board via the public Job Board API
 - [Lever Jobs Scraper](https://apify.com/ucchiii/lever-jobs) — open postings from any company on Lever via the public Postings API
+- [Workday Jobs Scraper](https://apify.com/ucchiii/workday-jobs) — open jobs from Workday career sites (myworkdayjobs.com) in the same fields as Career Site Jobs
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 - [Job Market Report](https://apify.com/ucchiii/job-market-report) — salary percentiles, top skills, remote share and role/country segments from normalized job data
 <!-- more-tools:end -->

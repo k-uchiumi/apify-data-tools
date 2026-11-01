@@ -65,6 +65,7 @@ Set a max charge per run in the run options to cap spend.
 <!-- more-tools:start -->
 ## More tools from the same developer
 
+- [Workday Jobs Scraper](https://apify.com/ucchiii/workday-jobs) — open jobs from Workday career sites (myworkdayjobs.com) in the same fields as Career Site Jobs
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 - [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets

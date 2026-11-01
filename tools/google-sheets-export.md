@@ -2,6 +2,10 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/google-sheets-export · **Price:** $0.05 per 1,000 rows · free demo with empty input
 
+**What you get:** your Apify dataset written into a Google Sheet (replace or append), nested fields flattened into columns.
+**Input:** pick the dataset in **Datasets**, paste the sheet URL, and a Google service account key (setup steps below; share the sheet with its email).
+**Try it free:** press **Start** with the input as it is for a demo on sample data (nothing is sent to Google, not charged). After that **$0.05 per 1,000 rows**.
+
 Writes one or more Apify datasets into a Google Sheet. **Built to just work**: retries on Google rate limits (429) and server errors, clear error messages, and no surprises with nested data.
 
 - **Replace** the tab, or **append** below existing rows (columns are matched to your existing header; new columns are added on the right)

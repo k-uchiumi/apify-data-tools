@@ -2,6 +2,10 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/maps-market-analyzer · **Price:** $5.00 per 1,000 segments · free demo with empty input
 
+**What you get:** a market table per area x category (places, ratings, reviews, chain share, competition score) plus GeoJSON/KML maps.
+**Input:** pick your Google Maps scraper run in **Google Maps datasets** (the field lists the datasets in your account; no ID to copy).
+**Try it free:** press **Start** with the input empty for a demo on fictional sample data (not charged). After that **$5 per 1,000 segments**.
+
 Site-selection and sales-territory teams, and agencies building pitch decks, get **a ready-made market analysis from
 Google Maps scraper data**: for every area and business category, how many places, how good, how reviewed, how chain-heavy.
 Feed it the dataset of a Google Maps scraper run; it finds the **least-competitive areas** and exports **GeoJSON and KML** maps.
@@ -27,11 +31,13 @@ Works with the output of `compass/crawler-google-places` and other Maps scrapers
 - **Agency proposals**: drop a map and a table of local competitors into a client deck
 
 ## How to use
-1. Run a Google Maps scraper (e.g. *Google Maps Scraper*) for your area and category. Note the dataset ID of the run.
-2. Run this Actor with that dataset ID in `datasetIds` (several runs are merged and deduplicated).
-3. Open the dataset table, the `SUMMARY` record (whitespace candidates) and the `MAP_GEOJSON` / `MAP_KML` records.
+1. Run a Google Maps scraper (for example [Google Maps Scraper](https://apify.com/compass/crawler-google-places)) for your area and category.
+2. Open this Actor and pick that run's dataset in **Google Maps datasets** (the field lists the datasets in your account, so you don't need to copy an ID). You can pick several runs; they are merged and deduplicated.
+3. Start. Open the dataset table, the `SUMMARY` record (whitespace candidates) and the `MAP_GEOJSON` / `MAP_KML` records.
 
-Leave `datasetIds` empty to see a **free demo** on fictional sample data (rows are marked `_demo: true`).
+**Try it on your own city for a few cents:** scrape one category in one city, run this Actor with **Group areas by = city** (the default), and you get about one segment per category and city name in the data: 10 segments cost **$0.05**.
+
+Leave **Google Maps datasets** empty to see a **free demo** on fictional sample data (rows are marked `_demo: true`). The demo shows the output format only; the numbers are not real places.
 
 ## Input
 ```json

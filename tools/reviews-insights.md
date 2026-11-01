@@ -2,6 +2,10 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/reviews-insights · **Price:** $5.00 per 1,000 places · free demo with empty input
 
+**What you get:** one row per place from your Google Maps reviews: star distribution, rating trend, owner response rate, top positive and negative terms.
+**Input:** pick your reviews-scraper run in **Google Maps reviews datasets** (the field lists the datasets in your account; no ID to copy).
+**Try it free:** press **Start** with the input empty for a demo on sample data (not charged). After that **$5 per 1,000 places**.
+
 **For local-SEO agencies, multi-location brands and market researchers who scrape Google Maps reviews.** You have
 **thousands of rows nobody has time to read**. This Actor turns the output of a reviews scraper
 (e.g. `compass/Google-Maps-Reviews-Scraper`) into **one insight row per place** — no scraping, no proxies, no LLM, fully

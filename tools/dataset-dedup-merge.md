@@ -2,6 +2,10 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/dataset-dedup-merge · **Price:** $0.50 per 1,000 items · free demo with empty input
 
+**What you get:** one clean dataset from several scraper runs, with duplicates removed by the fields you choose.
+**Input:** pick the runs in **Datasets** (the field lists the datasets in your account; no ID to copy) and the fields to compare (for example `url`).
+**Try it free:** press **Start** with the input empty for a demo on sample data (not charged). After that **$0.50 per 1,000 output items**.
+
 **For anyone who runs Apify scrapers more than once and ends up with overlapping results.** This Actor **merges any
 number of Apify datasets into one clean dataset and removes duplicates** by the fields you choose.
 **$0.50 per 1,000 output items**; reading and comparing is free.
