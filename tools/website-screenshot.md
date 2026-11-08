@@ -1,6 +1,8 @@
-# Website Screenshot API: Full Page, PDF, Mobile, No Banners
+# Website Screenshot: Full-Page URL Screenshots, PDF
 
 **Run it on Apify:** https://apify.com/ucchiii/website-screenshot · **Price:** $4.00 per 1,000 screenshots · free demo with empty input
+
+**Full page, PDF, mobile, no cookie banners**
 
 **For SEO teams, QA engineers, marketers and developers who need reliable screenshots of web pages.** Send a list of URLs
 and get a **PNG, JPEG, WebP or PDF** of each one, stored in your key-value store with a public link in the dataset.
@@ -25,6 +27,7 @@ for a free demo.
 
 ## Price
 | Event | Price |
+On the Apify Free plan, the $5 of monthly platform credit covers about **1,250 screenshots** a month (other events extra) — enough to try it on real data.
 |---|---|
 | `screenshot` (PNG, JPEG, WebP) | $0.004 |
 | `pdf` | $0.006 |
@@ -71,6 +74,8 @@ Only `http`/`https` URLs are accepted. Every host is resolved first and **localh
 request the page makes. Known limit: a DNS answer that changes between the check and the connection (DNS rebinding) is not
 detected. You are responsible for having the right to capture the pages you submit (site terms, copyright). Files stay in
 your own storage; nothing is kept by the developer.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer

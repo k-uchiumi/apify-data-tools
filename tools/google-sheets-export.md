@@ -1,6 +1,25 @@
-# Google Sheets Export (Dataset to Sheet)
+# Google Sheets Export: Send Scraped Data to a Sheet
 
 **Run it on Apify:** https://apify.com/ucchiii/google-sheets-export · **Price:** $0.05 per 1,000 rows · free demo with empty input
+
+**Google Sheets export: your Apify dataset as rows in a Google Sheet, nested fields flattened into columns**
+
+| name | rating | tags | address.city | address.country | hours.mon | website |
+|---|---|---|---|---|---|---|
+| Blue Bottle Coffee | 4.6 | coffee; roastery | Oakland | US |  | https://bluebottlecoffee.com/ |
+| Stumptown Coffee | 4.4 | coffee | Portland | US |  | https://www.stumptowncoffee.com/ |
+| Intelligentsia | 4.5 | coffee; tea; bakery | Chicago | US | 7-18 |  |
+
+*(real output of the free demo on 2026-11-04: the rows and columns that would be written to your sheet; shortened to 7 of the 8 columns)*
+
+To write to your own sheet you need a Google service account key (one-time setup, about 5 minutes; steps below) and the sheet shared with its email.
+Pick the dataset in **Datasets** and paste the sheet URL.
+
+**Try it:** press **Start** with the input as it is (no dataset, no sheet). You get the free demo above in a few seconds:
+3 sample rows flattened into these columns in the run's dataset, plus a `RESULT` record. Nothing is sent to Google and nothing is charged.
+
+**Price:** from **$0.035 per 1,000 written rows** on Apify's paid plans (shown on this page as "from $0.03"); $0.05 per 1,000 on the free plan.
+Charged per row, only after the rows are written.
 
 Writes one or more Apify datasets into a Google Sheet. **Built to just work**: retries on Google rate limits (429) and server errors, clear error messages, and no surprises with nested data.
 
@@ -9,8 +28,8 @@ Writes one or more Apify datasets into a Google Sheet. **Built to just work**: r
 - **Dedup on append**: skip rows whose key already exists in the sheet
 - Creates the tab if it does not exist; cells are capped at Google's 50,000 characters; stops with a clear reason before hitting the 10-million-cell limit
 - Your own Google service account; **the key is used only in memory and never logged or stored**
-- **$0.05 per 1,000 rows written** (rounded up). Set a max charge per run to cap spend.
-- Leave `datasetIds` and `spreadsheetId` empty for a **free demo** on sample data (nothing is sent to Google)
+- Set a max charge per run to cap spend.
+- Leave `datasetIds` and `spreadsheetId` empty for the **free demo** (3 sample rows in the dataset; nothing is sent to Google)
 
 ## Use cases
 - Share Google Maps leads or job listings with a sales or recruiting team in a Google Sheet
@@ -58,14 +77,22 @@ You are charged only after rows are written successfully. If Google rejects a wr
 Your key is kept in memory for the duration of the run only. It is never written to logs, the dataset or the key-value store. Use a dedicated service account with access only to the sheets you need.
 
 ## Pricing
-Pay per event: **$0.05 per 1,000 rows** written (partial thousands round up). Reading datasets is free.
+| Event | Free plan | Paid plans (Store discount tiers Bronze / Silver / Gold) |
+|---|---|---|
+| Written row (one row written to the Google Sheet) | $0.05 per 1,000 | $0.045 / $0.04 / $0.035 per 1,000 |
+
+The price on this page ("from $0.03") is the Gold tier price of $0.035, shortened to two decimals. A 300-row export costs 1.5 cents on the free plan.
+Reading datasets is free; failed runs and the demo are free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **100,000 rows** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Google Sheets Import](https://apify.com/ucchiii/google-sheets-import) — read Google Sheet rows into a dataset as JSON/CSV, public link or your service account
 - [Google Maps Leads Cleaner](https://apify.com/ucchiii/maps-leads-cleaner) — dedupe Google Maps scraper results, format phones (E.164), CRM-ready leads
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Maps Reviews Analyzer](https://apify.com/ucchiii/reviews-insights) — per-place ratings, trends, owner response rate and top terms from Google Maps reviews
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 <!-- more-tools:end -->

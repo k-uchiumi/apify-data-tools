@@ -2,8 +2,27 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/dataset-transform · **Price:** $0.50 per 1,000 rows · free demo with empty input
 
+**JSON to CSV for Apify datasets: nested JSON in, a flat table and a CSV download link out**
+
+| orderId | placedAt | company | country | total | status | tags |
+|---|---|---|---|---|---|---|
+| A-1004 | 2026-03-05T08:40:00Z | Initech | IN | 2075 | shipped | priority |
+| A-1001 | 2026-03-02T10:15:00Z | Northwind Traders | US | 1249.5 | shipped | priority; gift |
+| A-1003 | 2026-03-04 | Globex GmbH | DE | 310 | pending | wholesale |
+
+*(real output of the free demo on 2026-11-04, also saved as `export.csv` with a download link; the `_demo` marker column is left out here)* — made from 4 nested sample orders like
+`{"orderId": "A-1001", "placedAt": "2026-03-02T10:15:00Z", "customer": {"company": "Northwind Traders", "country": "US"}, "total": "$1,249.50", "tags": ["priority", "gift"], …}`:
+`customer.company` flattened and renamed to `company`, the price text turned into a number, a Unix timestamp turned into a date,
+the cancelled order filtered out, and the rows sorted by total.
+
 **For anyone whose scraper output is nested, messy JSON and who needs a clean table — a CSV for Excel or Google Sheets, a flat file for a database, or tidy rows for the next step of a workflow.** Point this Actor at an Apify dataset (or paste rows), say which columns you want, and get **clean rows plus a CSV / JSONL / JSON file with a download link**.
-**$0.50 per 1,000 output rows.** Reading, flattening and filtering are free; rows removed by your filters are not charged. No scraping, no external requests, no API keys.
+No scraping, no external requests, no API keys.
+
+**Try it:** press **Start** with the input as it is (no dataset, no pasted rows). You get the free demo above in a few seconds:
+3 rows in the dataset, `export.csv` in the key-value store and its link in `STATS`. Not charged (rows carry `_demo: true`).
+
+**Price:** from **$0.35 per 1,000 output rows** on Apify's paid plans (the price shown on this page); $0.50 per 1,000 on the free plan.
+Reading, flattening and filtering are free; rows removed by your filters are not charged.
 
 ## What it does
 - **Flatten nested JSON**: `{"address": {"city": "Austin"}}` becomes the column `address.city` (up to 20 levels, your own separator)
@@ -30,7 +49,7 @@
   "csvBom": true
 }
 ```
-**Empty input runs a free demo** on sample orders (not charged, rows carry `_demo: true`) so you can see flattening, type conversion, filtering, sorting and the CSV link before using your own data.
+With no dataset and no pasted rows, the Actor runs the **free demo** on 4 sample orders (3 rows out, not charged, rows carry `_demo: true`) so you can see flattening, type conversion, filtering, sorting and the CSV link before using your own data.
 
 ## Order of processing
 1. Flatten (depth, arrays) and optional text trimming
@@ -69,7 +88,12 @@ Column names in `coerce`, `filters`, `sortBy`, `select` and `omit` are the **fla
 - Filter and sort a dataset (top-rated, cheapest, newest) and hand the top 100 to the next Actor
 
 ## Pricing
-Pay per event: **$0.0005 per output row** ($0.50 per 1,000). Set a maximum charge per run to cap spend; the Actor stops cleanly when it is reached.
+| Event | Free plan | Paid plans (Store discount tiers Bronze / Silver / Gold) |
+|---|---|---|
+| Output row (one transformed row written to the dataset and the file) | $0.50 per 1,000 | $0.45 / $0.40 / $0.35 per 1,000 |
+
+The price on this page ("from $0.35") is the Gold tier price. Set a maximum charge per run to cap spend; the Actor stops cleanly when it is reached.
+On the Apify Free plan, the $5 of monthly platform credit covers about **10,000 rows** a month — enough to try it on real data.
 
 ## FAQ
 **Does it change my source dataset?** No. It only reads it and writes a new dataset.
@@ -77,12 +101,14 @@ Pay per event: **$0.0005 per output row** ($0.50 per 1,000). Set a maximum charg
 **Excel shows broken characters.** Turn on `csvBom`.
 **Is the file link private?** Anyone holding the signed link can download the file; the link does not give access to anything else in your account.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [CSV / XLSX Converter](https://apify.com/ucchiii/csv-xlsx-converter) — convert CSV, TSV, Excel XLSX, JSON and NDJSON files or Apify datasets into each other
+- [CSV to Excel Converter](https://apify.com/ucchiii/csv-xlsx-converter) — convert CSV, TSV, Excel XLSX, JSON and NDJSON files or Apify datasets into each other
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Dataset Change Detector](https://apify.com/ucchiii/dataset-change-detector) — compare two runs of any scraper: only added, removed and changed items
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 <!-- more-tools:end -->

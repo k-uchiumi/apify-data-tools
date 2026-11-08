@@ -1,6 +1,8 @@
-# Bulk HTTP Request: send many API calls from a list
+# Bulk HTTP Request: Send Many API Requests from a List
 
-**Run it on Apify:** https://apify.com/ucchiii/bulk-http-request · **Price:** $1.00 per 1,000 request completeds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/bulk-http-request · **Price:** $1.00 per 1,000 completed requests · free demo with empty input
+
+**Send many API calls from a list**
 
 **For developers, data and ops teams who have a list of API calls to make and don't want to write a loop.** Give it
 URLs (or full requests with method, headers and body) and get one dataset row per request: **status code, response
@@ -29,6 +31,7 @@ records, check endpoints or HEAD a list of URLs. **$1 per 1,000 completed reques
 
 ## Pricing
 **$0.001 per completed request.** A request is completed when the server answers — any HTTP status counts (a 404 or 500 is charged, a retry is not). Network errors (timeouts, DNS failures), invalid requests and requests blocked by the internal-address guard are **not charged**. Free demo on empty input (not charged).
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 requests** a month — enough to try it on real data.
 
 ## Input
 ```json
@@ -62,6 +65,8 @@ Rows are written as they finish; use `index` to restore the input order.
 You are responsible for what you send: only call servers and APIs you are allowed to use, and follow their terms of
 service and rate limits. The Actor sends exactly the requests you list; it does not crawl or follow links.
 Known limit: the internal-address check happens just before connecting; an attacker-controlled DNS server that changes its answer between the check and the connection (DNS rebinding) is not covered.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer

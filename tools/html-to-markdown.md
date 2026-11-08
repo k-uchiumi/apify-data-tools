@@ -1,6 +1,6 @@
 # HTML to Markdown Converter for LLM and RAG
 
-**Run it on Apify:** https://apify.com/ucchiii/html-to-markdown · **Price:** $1.00 per 1,000 page converteds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/html-to-markdown · **Price:** $1.00 per 1,000 converted pages · free demo with empty input
 
 Turn web pages, raw HTML or a dataset of HTML into **clean Markdown**, one row per document. Built for people who feed
 documents to an LLM, a RAG pipeline or a docs site and are tired of navigation menus, cookie banners, footers and
@@ -27,6 +27,7 @@ script junk in their text. No browser, no LLM, no API key.
 
 ## Price
 **$1.00 per 1,000 documents** ($0.001 per document converted). 1,000 pages cost $1, 10,000 pages cost $10.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 pages** a month — enough to try it on real data.
 Only successful conversions are charged. Failed fetches (404, timeout, blocked, too large), empty pages and the demo are free.
 
 ## Input
@@ -80,6 +81,8 @@ or `missing_html_field: html`. If a page redirected, `finalUrl` is added. For da
 ## Notes
 You are responsible for having the right to fetch and reuse the pages you convert, and for following each site's terms and
 robots.txt. This Actor fetches only the URLs you list and adds no personal data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer

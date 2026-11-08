@@ -1,4 +1,4 @@
-# Himalayas Remote Jobs API: Export Job Listings
+# Remote Jobs API: Find & Export Himalayas Jobs
 
 **Run it on Apify:** https://apify.com/ucchiii/himalayas-jobs-api · **Price:** $1.00 per 1,000 jobs · free demo with empty input
 
@@ -62,6 +62,7 @@ Set a keyword, seniority, country or timezone and get **one flat row per job** f
 
 ## Pricing
 Pay per event: **$0.001 per job returned** (1,000 jobs cost $1.00). Filters are applied before charging. The empty-input demo and failed runs are free. Set a max charge per run in the run options to cap spend.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 jobs** a month — enough to try it on real data.
 
 ## Attribution and terms (Himalayas)
 Job data comes from the Himalayas public API and is subject to its terms ([API docs](https://himalayas.app/docs/remote-jobs-api)). If you display or republish these listings you must:
@@ -79,11 +80,14 @@ Himalayas refreshes its data about every 24 hours, so running more than once a d
 - No personal data is collected. E-mail addresses and phone numbers in descriptions are removed.
 - Not affiliated with Himalayas.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Greenhouse Jobs Scraper](https://apify.com/ucchiii/greenhouse-jobs) — open jobs from any Greenhouse job board via the public Job Board API
 - [Lever Jobs Scraper](https://apify.com/ucchiii/lever-jobs) — open postings from any company on Lever via the public Postings API
+- [Workday Jobs Scraper](https://apify.com/ucchiii/workday-jobs) — open jobs from Workday career sites (myworkdayjobs.com) in the same fields as Career Site Jobs
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 - [Job Market Report](https://apify.com/ucchiii/job-market-report) — salary percentiles, top skills, remote share and role/country segments from normalized job data
 <!-- more-tools:end -->

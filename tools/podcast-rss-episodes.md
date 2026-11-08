@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/podcast-rss-episodes · **Price:** $1.00 per 1,000 episodes · free demo with empty input
 
+**Search shows, list every episode**
+
 **For podcast researchers, PR and outreach teams, media monitors and developers building podcast tools.** Find shows by keyword (Apple Podcasts directory), by Apple Podcasts URL / iTunes ID, or by RSS feed URL, and get **one clean row per episode**: title, publish date, duration, audio URL, season and episode number. **Audio is never downloaded** — you get the link only.
 
 **Try it free: leave input empty and press Start.** The demo is not charged and its rows carry `_demo: true`.
@@ -48,11 +50,16 @@
 A per-podcast summary (status, episodes found, unresolved inputs) is saved as `SUMMARY`. Feed email addresses are not output.
 Episodes and shows belong to their publishers; check their terms before republishing. Not affiliated with Apple.
 
+## Pricing
+Pay per event: **$0.001 per episode**. Failed runs and the demo are free. Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 episodes** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [RSS Feed Reader & Aggregator](https://apify.com/ucchiii/rss-feed-reader) — many RSS / Atom feeds merged into one clean article list
-- [Hacker News API](https://apify.com/ucchiii/hacker-news-api) — Hacker News stories, comments and 'Who is hiring' posts via the official APIs
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 <!-- more-tools:end -->

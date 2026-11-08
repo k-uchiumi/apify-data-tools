@@ -1,6 +1,18 @@
-# Domain Availability Checker: Registered or Available (RDAP)
+# Domain Availability Checker: Bulk Registered or Free (RDAP)
 
-**Run it on Apify:** https://apify.com/ucchiii/domain-availability-checker · **Price:** $0.50 per 1,000 domain checkeds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/domain-availability-checker · **Price:** $0.50 per 1,000 checked domains · free demo with empty input
+
+**Which of these domains are registered, and which look free?**
+
+> **Acceptable use:** Do not use this Actor to register domains that contain someone else's trademark or brand (cybersquatting) or for impersonation. Follow the terms of use of the registries' RDAP services.
+
+- **No per-run fee:** you pay only per domain answered, so splitting a list into many small runs costs the same as one big run.
+- **Refused or unknown domains are free:** timeouts, rate limits and TLDs the registry does not answer for come back as `unknown` and are not charged.
+- **Registered names come with registrar, creation and expiry dates** wherever the registry publishes them over RDAP (all `.com` and `.net` names).
+
+<!-- usage-stats:start -->
+*In the last 30 days: 500+ runs and 50,000+ domains checked, 0 failed runs (Apify public run stats and charged results, including our own tests; as of 3 Nov 2026).*
+<!-- usage-stats:end -->
 
 **Got a long list of name ideas, expiring domains or competitor domains, and checking them one by one on a registrar site takes forever?**
 Paste the list and get **one row per domain: registered or likely available, plus the registrar, creation date and expiry date for registered names.**
@@ -22,6 +34,9 @@ It asks the registries directly through **RDAP** (the modern replacement for WHO
 - **Price:** $0.0005 per domain checked — **$0.50 per 1,000 domains** (100 domains cost 5 cents). Invalid names and `unknown` results are **not charged**.
   Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
 
+
+**How each domain is decided (`method`):** every name is looked up in the registry's RDAP first. If the registry has the record, the row is `registered` with registrar and dates (`method: rdap`) — this includes all `.com` and `.net` names. A domain is reported as `available` only when RDAP says "not found" **and** DNS shows no nameservers (`method: rdap+dns`). If RDAP has no record but DNS shows nameservers (e.g. `ox.ac.uk`), or the TLD has no RDAP service (e.g. `.io`, `.de`, `.jp`) and DNS shows nameservers, the row is `registered` with `method: dns`. **Only these `method: dns` rows have no registrar, dates or registry status fields** (the registry does not publish them over RDAP) — use the WHOIS & DNS lookup Actor if you need more. `registered` and `available` are charged the same per domain whichever method decided them; `unknown` and `invalid` are free.
+
 ## What it does
 - **Registered or likely available**: HTTP 200 from the registry means registered; 404 ("not found") means likely available
 - **For registered names**: registrar and its IANA ID, creation, last-changed and expiry dates, days to expiry, `expired` flag, registry status codes
@@ -39,6 +54,13 @@ Registrant, administrative, technical and billing contacts are **never read or o
 }
 ```
 **Empty input runs a free demo** on three domains (not charged, rows carry `_demo: true`).
+
+## Next steps
+Got your list of registered and available domains? Take the next step with these Actors from the same developer:
+- **Full registration details** → [Domain WHOIS & DNS Lookup](https://apify.com/ucchiii/domain-whois): registrar, expiry, days left and nameservers for the registered names.
+- **DNS records** → [DNS Records Lookup](https://apify.com/ucchiii/dns-records-lookup): A, MX, TXT, SPF and DMARC — see whether a domain has a website or email set up.
+- **Is the site live, and where does it redirect?** → [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker): HTTP status codes and redirect chains.
+- **What is the site built with?** → [Website Technology Detector](https://apify.com/ucchiii/website-technology-detector): CMS, frameworks, analytics and CDN.
 
 ## Output
 One row per domain in the dataset (a table view is included):
@@ -65,9 +87,9 @@ One row per domain in the dataset (a table view is included):
 (Made-up placeholder values that show the shape of a row.) `status` is one of:
 | status | meaning | charged |
 |---|---|---|
-| `registered` | the registry returned registration data | yes |
-| `available` | the registry says "not found": the name is likely available | yes |
-| `unknown` | no RDAP service for the TLD, or a timeout, rate limit or server error (see `error`) | no |
+| `registered` | the registry returned registration data (`method: rdap`, with registrar and dates), or — for names the registry's RDAP does not hold or TLDs without RDAP — DNS shows nameservers (`method: dns`, no registrar/dates) | yes |
+| `available` | the registry says "not found" and DNS shows no nameservers (`method: rdap+dns`) | yes |
+| `unknown` | could not be decided: no RDAP and no NS for the TLD, or a timeout, rate limit, DNS or server error (see `error`) | no |
 | `invalid` | not a valid domain name | no |
 
 The record `SUMMARY` in the key-value store counts each status and the number of charged domains.
@@ -88,10 +110,13 @@ The record `SUMMARY` in the key-value store counts each status and the number of
 
 ## Pricing
 Pay per event: **$0.0005 per domain checked** ($0.50 per 1,000). Invalid and unknown results are free. Set a maximum charge per run to cap spend; the Actor stops cleanly when it is reached.
+On the Apify Free plan, the $5 of monthly platform credit covers about **10,000 domains** a month — enough to try it on real data.
 
 ## FAQ
 **Is this the same as WHOIS?** It returns the same kind of registration data, through RDAP, the protocol ICANN requires registries and registrars to run. It does not connect to port-43 WHOIS servers.
 **Why no owner name?** By design (see Privacy). The Actor is for registration status and dates, not for finding people.
+**Why do `.uk` domains show no registrar or dates?** The `.uk` registry's terms forbid commercial copying of its data, so `.uk` names (including `.co.uk`) are not looked up in its RDAP. They are decided from DNS only: a name with nameservers comes back `registered` (`method: dns`, charged like other DNS results); a name without nameservers comes back `unknown` (`error: uk_registry_not_queried_no_ns`, not charged), because DNS alone cannot prove it is free.
+**Why are some `.com`/`.net` names `unknown` with `verisign_daily_limit` or `verisign_refused`?** To stay polite to the `.com`/`.net` registry (Verisign), the Actor keeps a daily limit on its lookups there, shared by all runs, and stops querying it for the rest of the day (UTC) if the registry refuses requests. Those names come back `unknown` and are not charged; other TLDs are checked as usual. Run them again the next day (UTC).
 **Can I check subdomains?** Yes. Registration belongs to the registered domain, so for `www.example.com` the Actor checks `example.com` and shows it in `rdapDomain`. (It has no public-suffix list: for names under multi-part suffixes such as `co.uk`, give the registered domain itself.)
 **Need DNS records too?** See the domain WHOIS & DNS lookup Actor from the same developer.
 
@@ -99,7 +124,7 @@ Pay per event: **$0.0005 per domain checked** ($0.50 per 1,000). Invalid and unk
 ## More tools from the same developer
 
 - [Domain WHOIS & DNS Lookup](https://apify.com/ucchiii/domain-whois) — bulk WHOIS (RDAP) and DNS lookup: registrar, expiry, days left, A/MX/NS, no personal data
-- [DNS Records Lookup](https://apify.com/ucchiii/dns-records-lookup) — bulk DNS lookup: A, AAAA, MX, NS, TXT, SPF and DMARC per domain
+- [DNS Lookup](https://apify.com/ucchiii/dns-records-lookup) — bulk DNS lookup: A, AAAA, MX, NS, TXT, SPF and DMARC per domain
 - [Website Technology Detector](https://apify.com/ucchiii/website-technology-detector) — tech stack of websites in bulk: CMS, frameworks, analytics and tag IDs, CDN, consent tools
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 <!-- more-tools:end -->

@@ -1,6 +1,8 @@
-# CSV / XLSX Converter: CSV, TSV, JSON, NDJSON
+# CSV to Excel Converter: XLSX, CSV, TSV, JSON
 
 **Run it on Apify:** https://apify.com/ucchiii/csv-xlsx-converter · **Price:** $0.05 per 1,000 rows · free demo with empty input
+
+**CSV, TSV, Excel, JSON and NDJSON in any direction**
 
 **For anyone who gets a file in the wrong format: a CSV that Excel shows as garbage, an Excel sheet a script cannot read, a JSON export you need as a table, or a scraper dataset that has to become a spreadsheet.** Give this Actor file URLs (or an Apify dataset), pick the output format, and get **the converted file plus a public download link**, with encoding, delimiter and nested JSON handled for you.
 **$0.05 per 1,000 rows converted** (rounded up per file). Failed files and the demo are free. No scraping, no API keys.
@@ -52,6 +54,7 @@ To convert an Apify dataset instead, use `datasetIds` (pick it from your runs). 
 
 ## Pricing
 Pay per event: **$0.05 per 1,000 rows converted** (event `rows-1000`). Rows are counted per file and rounded up: a 2,500-row file costs 3 units ($0.15), a 150-row file 1 unit ($0.05). A file that fails (download error, bad format, over a limit) is not charged. Set a maximum charge per run to cap spend; the Actor stops cleanly before the next file when it is reached.
+On the Apify Free plan, the $5 of monthly platform credit covers about **100,000 rows** a month — enough to try it on real data.
 
 ## Use cases
 - Re-save a Shift_JIS or Windows-1252 CSV as UTF-8 so Excel, Sheets and databases show the text correctly
@@ -66,11 +69,13 @@ Pay per event: **$0.05 per 1,000 rows converted** (event `rows-1000`). Rows are 
 **Does it change my source?** No. It only reads the file or dataset and writes a new file.
 **Is the file link private?** Anyone holding the signed link can download that file; it gives no access to anything else in your account.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Dataset Transform](https://apify.com/ucchiii/dataset-transform) — flatten, filter, rename and convert any Apify dataset, export CSV / JSON / JSONL with a link
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Import](https://apify.com/ucchiii/google-sheets-import) — read Google Sheet rows into a dataset as JSON/CSV, public link or your service account
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [PDF Extractor](https://apify.com/ucchiii/pdf-extractor) — PDF to text, tables and metadata from public PDF URLs, page by page

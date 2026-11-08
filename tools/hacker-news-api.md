@@ -52,6 +52,7 @@ Who-is-hiring rows have `type: "hiring_post"`, `title` = first line of the posti
 
 ## Pricing
 Pay per event: **$0.001 per story or posting returned** ($1.00 per 1,000). Comments are included free with their story. Filters are applied before charging. The empty-input demo is free. Set a max charge per run in the run options to cap spend.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 stories or postings** a month — enough to try it on real data.
 
 ## Use cases
 - Brand and competitor monitoring: every new story that mentions your product or domain
@@ -70,9 +71,9 @@ Pay per event: **$0.001 per story or posting returned** ($1.00 per 1,000). Comme
 
 - [RSS Feed Reader & Aggregator](https://apify.com/ucchiii/rss-feed-reader) — many RSS / Atom feeds merged into one clean article list
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
-- [Himalayas Remote Jobs API](https://apify.com/ucchiii/himalayas-jobs-api) — remote job listings from the official Himalayas API, with attribution links
+- [Remote Jobs API](https://apify.com/ucchiii/himalayas-jobs-api) — remote job listings from the official Himalayas API, with attribution links
 - [Greenhouse Jobs Scraper](https://apify.com/ucchiii/greenhouse-jobs) — open jobs from any Greenhouse job board via the public Job Board API
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

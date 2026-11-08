@@ -1,24 +1,29 @@
 # Website Technology Detector: Tech Stack, CMS, Tags
 
-**Run it on Apify:** https://apify.com/ucchiii/website-technology-detector · **Price:** $2.00 per 1,000 site analyseds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/website-technology-detector · **Price:** $2.00 per 1,000 analysed sites · free demo with empty input
 
-**Paste a list of websites, get a spreadsheet of what each one is built with.** CMS, framework, hosting/CDN, analytics,
-tag managers and ad pixels — one flat row per site, ready for Excel or Google Sheets.
+**Website technology detector: paste a list of URLs, get this table back**
 
-**Try it free:** leave the input empty and press **Start** — you get a demo table in seconds, nothing is charged.
+| site | technologyNames | categories | gtmIds | otherTrackingTags |
+|---|---|---|---|---|
+| apify.com | Amazon CloudFront, Next.js, Intercom, Google Tag Manager | CDN, JavaScript framework, Live chat, Tag manager | GTM-MNGXGGB | HubSpot: 19497222 |
+| python.org | Fastly, Google Hosted Libraries, Font Awesome, Modernizr, jQuery, jQuery UI, Varnish, nginx | CDN, Fonts, JavaScript library, Reverse proxy, Web server | | |
+| example.com | Cloudflare | CDN | | |
 
-| url | technologyNames | gtmIds |
-|---|---|---|
-| https://apify.com | Amazon CloudFront, Next.js, Intercom, Google Tag Manager | GTM-MNGXGGB |
-| https://www.python.org | Fastly, Font Awesome, jQuery, jQuery UI, Modernizr, Varnish, nginx | |
+*(real output of a test run on 2026-11-04, shortened to 5 of the columns; the output's `url` column holds the full URL)*
 
-*(real output from a test run on 2026-10-20)*
+One flat row per site: CMS, framework, hosting/CDN, analytics, tag managers, ad pixels and the GTM / GA4 / Ads / Meta Pixel IDs
+in the page source — ready for Excel or Google Sheets.
+
+**Try it:** press **Start** with the prefilled example (example.com and python.org). You get the python.org and example.com rows above in about 5 seconds,
+charged as 2 analysed sites (less than half a cent). Clear the URL list and press Start to get the same 2 rows as a free demo (not charged).
+
+**Price:** from **$1.40 per 1,000 analysed sites** on Apify's paid plans (the price shown on this page); $2.00 per 1,000 on the free plan.
+Failed, blocked or error pages are not charged.
 
 - **Who it's for:** agencies, sales teams building prospect lists by technology, market researchers, developers.
 - **Bulk:** up to 1,000 URLs per run; one request per site, no proxies or browser needed.
 - **Tag IDs included:** GTM, GA4, Google Ads and Meta Pixel IDs found in the page source.
-- **Price:** $2 per 1,000 sites analysed (100 sites cost 20 cents). Failed, blocked or error pages are **not charged**.
-  Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
 
 ## Use cases
 - **Market and competitor research**: which sites in a list run Shopify, WordPress, Webflow, Next.js and so on
@@ -78,23 +83,28 @@ Set `includeTracking` to `false` to leave analytics, tag managers, ad pixels and
 - Detection only: the output lists what is present and where it was seen.
 
 ## Price
-| Event | Price |
-|---|---|
-| `site` (one URL fetched and analysed, HTTP status below 400) | $0.002 |
+| Event | Free plan | Paid plans (Store discount tiers Bronze / Silver / Gold) |
+|---|---|---|
+| Analysed site (one URL fetched and analysed, HTTP status below 400) | $2.00 per 1,000 | $1.80 / $1.60 / $1.40 per 1,000 |
+
+The price on this page ("from $1.40") is the Gold tier price. 100 sites cost 20 cents on the free plan.
+On the Apify Free plan, the $5 of monthly platform credit covers about **2,500 sites** a month — enough to try it on real data.
 
 **Not charged:** timeouts, DNS failures, redirect loops, HTTP 4xx/5xx pages, blocked and invalid URLs, and the empty-input demo. A row is charged only after it has been written to the dataset. If you set a maximum cost per run, the run stops when the limit is reached.
 
 ## Notes
 Only request addresses you are allowed to access. Some sites block automated requests; those rows show the HTTP status or error. Versions are reported only when the page, header or script address states them.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 - [Domain WHOIS & DNS Lookup](https://apify.com/ucchiii/domain-whois) — bulk WHOIS (RDAP) and DNS lookup: registrar, expiry, days left, A/MX/NS, no personal data
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

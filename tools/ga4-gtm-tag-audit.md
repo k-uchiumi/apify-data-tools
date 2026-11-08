@@ -1,6 +1,8 @@
 # GA4 & GTM Tag Audit: Google Tag Manager Check
 
-**Run it on Apify:** https://apify.com/ucchiii/ga4-gtm-tag-audit · **Price:** $20.00 per 1,000 site auditeds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/ga4-gtm-tag-audit · **Price:** $20.00 per 1,000 audited sites · free demo with empty input
+
+**Google Tag Manager and GA4 audit for a list of URLs**
 
 **For marketers, analysts and agencies who need a quick GA4 audit or GTM audit across many sites.** Paste up to 300 public URLs
 and get **one row per site**: is **GA4** (gtag.js) installed, is a **Google Tag Manager** container present, are there
@@ -86,6 +88,7 @@ signal is not visible in static HTML (for example a consent tool injected at run
 
 ## Price
 | Event | Price |
+On the Apify Free plan, the $5 of monthly platform credit covers about **250 sites** a month — enough to try it on real data.
 |---|---|
 | `site` (one URL fetched and audited, HTTP status below 400) | $0.02 |
 
@@ -93,6 +96,8 @@ signal is not visible in static HTML (for example a consent tool injected at run
 
 ## Notes
 Only request addresses you are allowed to access. Some sites block automated requests; those rows show the HTTP status or error. The findings are signals from public page source, intended as a starting point for a closer look in GA4 and GTM, not a replacement for it.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer

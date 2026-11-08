@@ -1,6 +1,6 @@
-# Keyword Research: Search Volume, CPC (DataForSEO key)
+# Google Ads Keyword Search Volume & CPC (Your DataForSEO Key)
 
-**Run it on Apify:** https://apify.com/ucchiii/keyword-search-volume · **Price:** $20.00 per 1,000 lookup batch (up to 1,000 keywords)s · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/keyword-search-volume · **Price:** $1.00 per 1,000 keyword with datas · free demo with empty input
 
 **For SEO and PPC teams who have a keyword list and need numbers to prioritize it.** Get Google Ads monthly search
 volume, CPC, competition, top-of-page bid range and 12-month trends for up to 10,000 keywords per run, in any country
@@ -8,7 +8,7 @@ and language. You use **your own [DataForSEO](https://dataforseo.com/) API login
 **You need a DataForSEO account (API login and password).** DataForSEO bills your account for each lookup
 (Google Ads search volume, roughly $0.05–$0.09 per request of up to 1,000 keywords — check
 [DataForSEO pricing](https://dataforseo.com/pricing) for your rate). On top of that, this Actor charges
-**$0.02 per batch of up to 1,000 keywords + $0.001 per keyword with data** (e.g. 10 keywords ≈ $0.03,
+**$0.00002 per keyword looked up + $0.001 per keyword with data** (e.g. 10 keywords ≈ $0.0102,
 1,000 keywords ≈ $1.02). Keywords without data are not charged. Without your DataForSEO login the Actor stops with an
 error and charges nothing. Leave the input empty for a free demo with sample data.
 
@@ -51,13 +51,16 @@ months with the oldest 3 of the newest 12 months. Both are `null` when there is 
 
 ## Cost record
 Each run saves a `COST` record (number of DataForSEO tasks and the estimated DataForSEO cost) in its key-value store, so you can check what the run used on your DataForSEO account.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 keywords with data** a month (other events extra) — enough to try it on real data.
 
 ## Charging and limits
-- `keyword-batch` ($0.02) is charged once per DataForSEO lookup task (each started chunk of up to 1,000 keywords), only after that task succeeded.
+- `keyword-lookup` ($0.00002 per keyword, $0.02 per 1,000) is charged for each keyword sent in a DataForSEO lookup task, only after that task succeeded.
 - `keyword` ($0.001) is charged only for rows where search volume data was returned. Rows without data (`dataAvailable: false`) are written but not charged.
 - Your maximum charge per run is respected: no lookup is sent that the remaining budget cannot pay for.
 - Free demo (no keywords and no credentials): a fixed sample table marked `_demo: true`, "sample data, not real volumes". DataForSEO is not called.
 - Keywords given without credentials fail the run, no charge. Google Ads data has no values for some sensitive categories; such keywords come back without data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer
