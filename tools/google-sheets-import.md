@@ -1,8 +1,10 @@
-# Google Sheets Import: Read Sheet Rows to JSON/CSV
+# Google Sheets Import: Read Rows from a Sheet
 
 **Run it on Apify:** https://apify.com/ucchiii/google-sheets-import · **Price:** $0.05 per 1,000 rows · free demo with empty input
 
-Turns any Google Sheet tab into an Apify dataset (export as JSON, CSV, Excel or via API) with real numbers, booleans and dates. **Built to just work**: retries on Google rate limits (429) and server errors, and when something is wrong it stops with a plain message ("sheet is not shared", "tab 'X' not found, tabs are: ...") instead of failing silently or returning nothing.
+**Read Google Sheet rows into JSON/CSV, reliably**
+
+Returns the rows of any Google Sheet tab as an Apify dataset (export as JSON, CSV, Excel or via API) with real numbers, booleans and dates. **Built to just work**: retries on Google rate limits (429) and server errors, and when something is wrong it stops with a plain message ("sheet is not shared", "tab 'X' not found, tabs are: ...") instead of failing silently or returning nothing.
 
 **For** developers, analysts and ops teams who keep input lists, keywords, URLs, prices or leads in a Google Sheet and want to feed them to scrapers, automations or AI pipelines.
 
@@ -16,7 +18,7 @@ Example output (one dataset item per sheet row):
   "Major": "English", "Extracurricular Activity": "Drama Club" }
 ```
 
-**Price: $0.05 per 1,000 rows** saved (partial thousands round up). Example: a 2,500-row sheet costs 3 x $0.05 = **$0.15**; a 300-row sheet costs $0.05. Header rows, skipped empty rows and failed runs are not charged. Set a max charge per run to cap spend.
+**Price: $0.05 per 1,000 rows** saved, charged per row ($0.00005 a row). Example: a 2,500-row sheet costs **$0.125**; a 300-row sheet costs $0.015. **The $5 monthly free credit covers about 100,000 rows.** Header rows, skipped empty rows and failed runs are not charged. Set a max charge per run to cap spend.
 
 **Free demo**: leave the input empty and the Actor reads Google's public "Class Data" sample sheet (10 rows, not charged).
 
@@ -59,15 +61,18 @@ The default dataset has one item per sheet row. Run details are in the key-value
 You are charged only for rows saved to the dataset. Your key stays in memory for the run and is never written to logs, the dataset or the key-value store. Use a dedicated service account with access only to the sheets you need. The Actor only reads; it never writes to your sheet.
 
 ## Pricing
-Pay per event: **$0.05 per 1,000 rows** (partial thousands round up). The demo is free.
+Pay per event: **$0.00005 per row** ($0.05 per 1,000 rows), charged per row. The demo is free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **100,000 rows** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [CSV / XLSX Converter](https://apify.com/ucchiii/csv-xlsx-converter) — convert CSV, TSV, Excel XLSX, JSON and NDJSON files or Apify datasets into each other
+- [CSV to Excel Converter](https://apify.com/ucchiii/csv-xlsx-converter) — convert CSV, TSV, Excel XLSX, JSON and NDJSON files or Apify datasets into each other
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Dataset Transform](https://apify.com/ucchiii/dataset-transform) — flatten, filter, rename and convert any Apify dataset, export CSV / JSON / JSONL with a link
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Dataset Change Detector](https://apify.com/ucchiii/dataset-change-detector) — compare two runs of any scraper: only added, removed and changed items
 <!-- more-tools:end -->
 

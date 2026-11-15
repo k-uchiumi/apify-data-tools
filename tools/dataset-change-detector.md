@@ -2,9 +2,11 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/dataset-change-detector · **Price:** $0.50 per 1,000 changes · free demo with empty input
 
+**New, removed and changed items between two runs**
+
 You run the same scraper every day or week. What you actually need is **what changed**: the price that dropped, the
 product that went out of stock, the new job posting, the listing that disappeared. This Actor compares the
-**previous dataset** with the **current dataset** and writes only the differences — no scraping, no proxies, no
+**previous dataset** with the **current dataset** and returns only the differences — no scraping, no proxies, no
 code.
 
 - **Added / removed / changed** items, one row per change
@@ -13,7 +15,7 @@ code.
 - **Watch or ignore fields**: track only `price` and `inStock`, ignore noise like `scrapedAt`; nested paths such as `offer.price` work
 - **Numeric threshold**: ignore price moves smaller than, say, 1%
 - Optionally output `unchanged` items too
-- **$0.50 per 1,000 changes.** Reading datasets is free; only the items written are billed.
+- **$0.50 per 1,000 changes; the $5 monthly free credit covers about 10,000 changes.** Reading datasets is free; only the items written are billed.
 
 Typical uses: price monitoring, stock alerts, new job postings, real-estate listing changes, competitor catalog tracking.
 
@@ -68,10 +70,16 @@ If an item has no key, items are matched by a hash of their whole content (minus
 - This Actor only reads datasets you already own; it does not access any website. You are responsible for how the
   underlying data was collected and used.
 
+## Pricing
+Pay per event: **$0.0005 per change**. Failed runs and the demo are free. Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
+On the Apify Free plan, the $5 of monthly platform credit covers about **10,000 changes** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Dataset Transform](https://apify.com/ucchiii/dataset-transform) — flatten, filter, rename and convert any Apify dataset, export CSV / JSON / JSONL with a link
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Google Maps Leads Cleaner](https://apify.com/ucchiii/maps-leads-cleaner) — dedupe Google Maps scraper results, format phones (E.164), CRM-ready leads

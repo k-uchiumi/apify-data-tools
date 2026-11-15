@@ -1,9 +1,11 @@
-# DNS Records Lookup: Bulk A, MX, TXT, SPF, DMARC
+# DNS Lookup: Bulk DNS Records, A, MX, TXT, SPF, DMARC
 
-**Run it on Apify:** https://apify.com/ucchiii/dns-records-lookup · **Price:** $0.50 per 1,000 domain resolveds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/dns-records-lookup · **Price:** $0.70 per 1,000 resolved domains · free demo with empty input
+
+**Bulk A, AAAA, MX, NS, TXT, SPF, DMARC and more for a list of domains**
 
 **For anyone who has to check DNS for many domains and is tired of running `dig` one name at a time:** IT and migration teams, email deliverability and security people checking SPF / DMARC, agencies that manage client domains, SEO and brand-protection teams. Give this Actor up to 2,000 domains (or a dataset) and get **one flat row per domain: A, AAAA, CNAME, MX, NS, TXT, SOA, CAA and SRV records, the SPF and DMARC policy lines, a "has mail server" flag and the DNSSEC flag**.
-No scraping, no proxies, no API keys: it asks the public **DNS-over-HTTPS JSON APIs of Cloudflare and Google** and falls back to the other one when one fails.
+No scraping, no proxies, no API keys: it asks Cloudflare's public **DNS-over-HTTPS JSON API (1.1.1.1)** and retries on failure.
 
 **Try it free: leave input empty and press Start** (four example domains, not charged, rows carry `_demo: true`).
 
@@ -16,7 +18,8 @@ No scraping, no proxies, no API keys: it asks the public **DNS-over-HTTPS JSON A
 | no-such-name.example | nxdomain |  |  |  |  | false | false | cloudflare |
 
 ## Price
-**$0.50 per 1,000 domains** ($0.0005 each; 1,000 domains cost $0.50, the full 2,000-domain cap costs $1). You pay only for domains that were **resolved**: records came back, or the resolver answered NXDOMAIN (a clear "this name does not exist" answer is a result). Failed lookups, invalid input and the demo are free. The price is the same for one record type or nine. Set a maximum charge per run to cap spend; the Actor stops cleanly when it is reached.
+**$0.70 per 1,000 domains** ($0.0007 each; 1,000 domains cost $0.70, the full 2,000-domain cap costs $1.40). You pay only for domains that were **resolved**: records came back, or the resolver answered NXDOMAIN (a clear "this name does not exist" answer is a result). Failed lookups, invalid input and the demo are free. The price is the same for one record type or nine. Set a maximum charge per run to cap spend; the Actor stops cleanly when it is reached.
+On the Apify Free plan, the $5 of monthly platform credit covers about **7,100 domains** a month — enough to try it on real data.
 
 ## What it does
 - **Nine record types, your choice**: A, AAAA, CNAME, MX (as `"10 mail.example.com"`, sorted by priority), NS, TXT (long records joined), SOA, CAA, SRV. Default: A, AAAA, MX, NS, TXT.
@@ -80,7 +83,7 @@ If one question of a domain fails, the whole row is `error` (the records that di
 - 2,000 domains per run (extra names are ignored with a log warning); up to 10 in parallel
 - At most as many connections to one resolver as your concurrency setting, at least 0.05 s between requests to the same resolver
 - Each request has a timeout (default 10 s, max 60 s) and is retried at most 3 times per resolver
-- The answers are those of Cloudflare's and Google's public resolvers, which cache; TTLs shown are the remaining TTL and can differ between calls. Both resolvers apply their own rate limits; heavy runs may see `error` rows, which are free
+- The answers are those of Cloudflare's public resolver (1.1.1.1), which caches; TTLs shown are the remaining TTL and can differ between calls. The resolver applies its own rate limits; heavy runs may see `error` rows, which are free
 - `dnssec` shows whether the resolver validated the answers, not whether the domain's registrar has the right DS record
 
 ## FAQ
@@ -89,9 +92,12 @@ If one question of a domain fails, the whole row is `error` (the records that di
 **How do I get SRV records?** Add SRV to the types and give the full service name, e.g. `_sip._tcp.example.com`. DKIM works the same way with TXT: give `selector._domainkey.example.com`.
 **Does it return WHOIS or registrar data?** No. This Actor is DNS only.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
+- [Email DNS Checker](https://apify.com/ucchiii/email-dns-checker) — MX, SPF (with the 10-lookup count), DMARC and DKIM for many domains, with pass or needs attention and the reasons
 - [Domain WHOIS & DNS Lookup](https://apify.com/ucchiii/domain-whois) — bulk WHOIS (RDAP) and DNS lookup: registrar, expiry, days left, A/MX/NS, no personal data
 - [Domain Availability Checker](https://apify.com/ucchiii/domain-availability-checker) — bulk domain availability check via RDAP: registered or likely available
 - [Website Technology Detector](https://apify.com/ucchiii/website-technology-detector) — tech stack of websites in bulk: CMS, frameworks, analytics and tag IDs, CDN, consent tools

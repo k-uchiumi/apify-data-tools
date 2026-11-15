@@ -1,9 +1,9 @@
 # Lever Jobs Scraper: Postings API Export
 
-**Run it on Apify:** https://apify.com/ucchiii/lever-jobs · **Price:** $1.00 per 1,000 jobs · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/lever-jobs · **Price:** $1.60 per 1,000 jobs · free demo with empty input
 
 **For recruiters, sales-intelligence teams, job-board builders and analysts who need the open jobs of companies that hire through Lever.**
-Paste Lever company slugs or `jobs.lever.co` URLs and get **one clean row per job**. **$1.00 per 1,000 jobs**, you pay only for jobs returned.
+Paste Lever company slugs or `jobs.lever.co` URLs and get **one clean row per job**. **$1.60 per 1,000 jobs**, you pay only for jobs returned.
 
 **How this differs from [Career Site Jobs](https://apify.com/ucchiii/career-site-jobs):** this Actor targets **Lever only** and takes company slugs or `jobs.lever.co` URLs, with no company-name guessing across systems. Career Site Jobs covers six ATS (Greenhouse, Ashby, Workable, SmartRecruiters or Recruitee too) and also accepts plain company names.
 
@@ -54,7 +54,8 @@ Other options: `includeDescription` (default on), `includeDescriptionHtml` (defa
 - A per-company summary (found / not found, jobs on board, jobs returned) is saved to the key-value store as `SUMMARY`.
 
 ## Pricing
-Pay per event: **$0.001 per job returned** ($1.00 per 1,000). Filters are applied before charging. The empty-input demo is free.
+Pay per event: **$0.0016 per job returned** ($1.60 per 1,000). Filters are applied before charging. The empty-input demo is free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **3,100 jobs** a month — enough to try it on real data.
 Set a max charge per run in the run options to cap spend.
 
 ## Use cases
@@ -68,14 +69,16 @@ Set a max charge per run in the run options to cap spend.
 - A slug that does not exist is reported as `not_found` in `SUMMARY` and is not charged.
 - Not affiliated with Lever.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [Himalayas Remote Jobs API](https://apify.com/ucchiii/himalayas-jobs-api) — remote job listings from the official Himalayas API, with attribution links
+- [Remote Jobs API](https://apify.com/ucchiii/himalayas-jobs-api) — remote job listings from the official Himalayas API, with attribution links
 - [Job Listings API](https://apify.com/ucchiii/career-site-jobs) — every open job from Greenhouse, Lever, Ashby, Workable, SmartRecruiters and Recruitee career sites
 - [Greenhouse Jobs Scraper](https://apify.com/ucchiii/greenhouse-jobs) — open jobs from any Greenhouse job board via the public Job Board API
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/job-postings-normalizer · **Price:** $0.50 per 1,000 jobs · free demo with empty input
 
+**One clean format for any job scraper**
+
 **For job-board builders, recruiters and labour-market analysts who collect jobs from several scrapers.** You scraped
 LinkedIn Jobs, Indeed, Glassdoor or company career pages and now have **five different field names for the same thing,
 salaries as free text, duplicates across runs and dates like "3 days ago"**. This Actor turns the output of *any* job
@@ -64,6 +66,7 @@ key-value store as `STATS`.
 
 ## Pricing
 Pay per event: **$0.50 per 1,000 jobs** written to the output (`job` event). Set a maximum cost per run and the Actor
+On the Apify Free plan, the $5 of monthly platform credit covers about **10,000 jobs** a month — enough to try it on real data.
 stops cleanly when it is reached.
 
 ## Notes
@@ -71,12 +74,14 @@ This Actor only processes datasets you already own; it does not access any job s
 best-effort: ambiguous values are left empty rather than guessed (a number without a currency sign has no currency). You
 are responsible for how the underlying data was collected and used.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Job Listings API](https://apify.com/ucchiii/career-site-jobs) — every open job from Greenhouse, Lever, Ashby, Workable, SmartRecruiters and Recruitee career sites
 - [Job Market Report](https://apify.com/ucchiii/job-market-report) — salary percentiles, top skills, remote share and role/country segments from normalized job data
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Japanese Text Toolkit](https://apify.com/ucchiii/japanese-text-toolkit) — furigana, romaji, wareki dates and normalization for Japanese text
 <!-- more-tools:end -->

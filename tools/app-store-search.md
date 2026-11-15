@@ -1,6 +1,8 @@
-# App Store Scraper: Search, Lookup & Top Charts (iTunes API)
+# App Store Search: Apple App Details, Top Charts, iTunes
 
-**Run it on Apify:** https://apify.com/ucchiii/app-store-search · **Price:** $2.00 per 1,000 app returneds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/app-store-search · **Price:** $1.30 per 1,000 returned apps · free demo with empty input
+
+**Search, look up and chart Apple App Store apps (iTunes API)**
 
 **Get one flat row per iPhone/iPad app from Apple's official iTunes Search API: rating, price, version, size, genres, developer and more.** Built for ASO and market researchers, app developers watching competitors, investors and analysts, and anyone who needs App Store data in a spreadsheet.
 
@@ -19,7 +21,7 @@ Example output row (shortened, illustrative):
 }
 ```
 
-**Price: $2 per 1,000 apps ($0.002 each).** Example: a top-100 chart costs $0.20; 50 search results cost $0.10. Failed requests and searches with no results are free. **Free demo:** leave the input empty to get the top 10 free apps in the US at no charge.
+**Price: $1.30 per 1,000 apps ($0.0013 each).** Example: a top-100 chart costs $0.13; 50 search results cost $0.065. Failed requests and searches with no results are free. **Free demo:** leave the input empty to get the top 10 free apps in the US at no charge.
 
 ## What you get (one row per app)
 | Column | Content |
@@ -54,20 +56,23 @@ Lookup by URL uses the country in the link, for example `https://apps.apple.com/
 
 ## Price
 | Event | Price |
+On the Apify Free plan, the $5 of monthly platform credit covers about **3,800 apps** a month — enough to try it on real data.
 |---|---|
-| `app` (one app row written) | $0.002 |
+| `app` (one app row written) | $0.0013 |
 
 **Not charged:** failed requests, searches or lookups with no result, and the empty-input demo. A row is charged only after it is written to the dataset. If you set a maximum cost per run, the run stops when the limit is reached.
 
 ## Notes
 App Store data belongs to Apple and the app publishers; check Apple's terms for how you may use it. Only app-level public metadata is returned, no personal data.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Website Technology Detector](https://apify.com/ucchiii/website-technology-detector) — tech stack of websites in bulk: CMS, frameworks, analytics and tag IDs, CDN, consent tools
-- [Keyword Research](https://apify.com/ucchiii/keyword-search-volume) — Google Ads search volume, CPC and competition for keyword lists (bring your own DataForSEO key)
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Google Ads Keyword Search Volume & CPC](https://apify.com/ucchiii/keyword-search-volume) — Google Ads search volume, CPC and competition for keyword lists (bring your own DataForSEO key)
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [RSS Feed Reader & Aggregator](https://apify.com/ucchiii/rss-feed-reader) — many RSS / Atom feeds merged into one clean article list
 <!-- more-tools:end -->

@@ -1,6 +1,8 @@
 # PDF Extractor: PDF to Text, Tables & Metadata
 
-**Run it on Apify:** https://apify.com/ucchiii/pdf-extractor · **Price:** $4.00 per 1,000 pdf extracteds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/pdf-extractor · **Price:** $4.00 per 1,000 extracted pdfs · free demo with empty input
+
+**PDF to text, tables & metadata**
 
 **For developers, analysts and AI/RAG pipelines that need the contents of PDFs as clean data.** Give it public PDF URLs and
 get **per-page text**, **tables as rows and cells** and document metadata (title, author, producer, page count). A
@@ -40,18 +42,21 @@ Leave the input empty for a free demo.
 
 ## Pricing
 $0.004 per PDF (pay per event, `pdf`; includes the first 20 extracted pages) + $0.0005 per extra page (`page`). Example: a 10-page PDF costs $0.004, a 100-page PDF $0.044. Failed, scanned-only and empty PDFs are free. For comparison, other PDF text Actors in the Apify Store charge about $0.003 to $0.02 per PDF (per document) or $0.003 to $0.005 per page.
+On the Apify Free plan, the $5 of monthly platform credit covers about **1,250 PDFs** a month (other events extra) — enough to try it on real data.
 
 ## Limits and notes
 - Text order and table detection follow the PDF's layout; complex multi-column pages and borderless tables may need checking.
 - Password-protected PDFs are not opened (`encrypted`). Only the PDFs you list are downloaded; links inside them are not followed.
 - Only process PDFs you are allowed to download. The text belongs to the document's rights holder.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [OCR Image to Text](https://apify.com/ucchiii/ocr-image-text) — OCR for image URLs and scanned PDFs with built-in Tesseract: text, confidence and line boxes in 8 languages
+- [Tesseract OCR](https://apify.com/ucchiii/ocr-image-text) — OCR for image URLs and scanned PDFs with built-in Tesseract: text, confidence and line boxes in 8 languages
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 <!-- more-tools:end -->

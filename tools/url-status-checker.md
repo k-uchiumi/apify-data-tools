@@ -2,9 +2,26 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/url-status-checker · **Price:** $0.30 per 1,000 URLs · free demo with empty input
 
+**Bulk URL status checker: HTTP status, redirects and broken links for a list of URLs**
+
+| statusCode | finalStatusCode | redirectCount | isHttpsRedirect | responseTimeMs | url | finalUrl |
+|---|---|---|---|---|---|---|
+| 200 | 200 | 0 | false | 134 | https://apify.com | https://apify.com |
+| 301 | 200 | 1 | true | 704 | http://apify.com | https://apify.com/ |
+| 404 | 404 | 0 | false | 417 | https://apify.com/this-page-does-not-exist-404 | https://apify.com/this-page-does-not-exist-404 |
+
+*(real output of the prefilled example on 2026-11-04, shortened to 7 of the columns; each row also has the full `redirectChain`)*
+
 **For SEO teams and web developers who need to verify a long list of URLs.** Get the HTTP status, the **full redirect
 chain**, the final URL and the response time for each — for **site migrations** (verify your 301 map), SEO audits and
-**broken-link checks**. **$0.30 per 1,000 URLs checked.** Leave the input empty for a free demo.
+**broken-link checks**.
+
+**Try it:** press **Start** with the prefilled example (3 apify.com URLs). You get the 3 rows above in about 4 seconds,
+charged as 3 checked URLs (less than a tenth of a cent). Clear the URL list and press Start for a free demo on 5 sample URLs
+(apify.com and python.org, with and without https; not charged).
+
+**Price:** from **$0.21 per 1,000 checked URLs** on Apify's paid plans (the price shown on this page); $0.30 per 1,000 on the free plan.
+Rows that never reach the network (`invalid_url`, `blocked_private_address`) are not charged.
 
 ## Use cases
 - Verify a 301 redirect map after a migration
@@ -18,7 +35,7 @@ chain**, the final URL and the response time for each — for **site migrations*
 - Input as a list, or from another Actor's **dataset** (choose the URL field)
 - Polite by design: max 2 connections per host, at least 0.2 s between requests to the same host, up to 100,000 URLs per run
 - Status counts are saved as `SUMMARY` in the key-value store
-- Rows that never reach the network (`invalid_url`, `blocked_private_address`) are **not charged**. Free demo on empty input (not charged)
+- Rows that never reach the network (`invalid_url`, `blocked_private_address`) are **not charged**. The free demo (empty URL list) is not charged either
 - Safe by design: URLs that resolve to internal addresses (localhost, private ranges, link-local such as 169.254.169.254, IPv6 loopback/unique-local) are never contacted, including redirect targets — reported as `blocked_private_address`
 
 ## Input
@@ -44,14 +61,24 @@ is e.g. `dns_failure`, `timeout`, `too_many_redirects`, `redirect_loop`, `invali
 Some sites block automated requests or answer HEAD/GET differently than a browser; results reflect what a plain HTTP client sees.
 Set a custom `userAgent` if needed, and only check URLs you are allowed to request.
 
+## Pricing
+| Event | Free plan | Paid plans (Store discount tiers Bronze / Silver / Gold) |
+|---|---|---|
+| Checked URL (status, redirect chain and timing returned) | $0.30 per 1,000 | $0.27 / $0.24 / $0.21 per 1,000 |
+
+The price on this page ("from $0.21") is the Gold tier price. Failed runs and the demo are free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **16,000 URLs** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Bulk HTTP Request](https://apify.com/ucchiii/bulk-http-request) — send many HTTP requests (GET/POST/...) from a list and collect status, headers and body
+- [Parked Domain Checker](https://apify.com/ucchiii/parked-domain-checker) — sort a list of domains into live, parked or for sale, redirect and dead, with the reasons for each verdict
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
 - [Domain WHOIS & DNS Lookup](https://apify.com/ucchiii/domain-whois) — bulk WHOIS (RDAP) and DNS lookup: registrar, expiry, days left, A/MX/NS, no personal data
-- [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
 <!-- more-tools:end -->
 
 ---

@@ -1,10 +1,12 @@
 # RSS Feed Reader & Aggregator: RSS, Atom to JSON
 
-**Run it on Apify:** https://apify.com/ucchiii/rss-feed-reader · **Price:** $0.30 per 1,000 items · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/rss-feed-reader · **Price:** $0.90 per 1,000 items · free demo with empty input
+
+**Many feeds, one clean list**
 
 **For marketers, researchers and developers who follow many blogs and news sites.** Fetch **many RSS / Atom feeds
 at once** and get one tidy list of articles — for news monitoring, newsletters, content collection or as input for
-AI pipelines. **$0.30 per 1,000 items**; an empty input runs a free demo.
+AI pipelines. **$0.90 per 1,000 items**; an empty input runs a free demo.
 
 - Supports **RSS 2.0, Atom 1.0 and RSS 1.0 (RDF)**
 - **Auto-discovery**: give a website URL and the feed is found from the page's `<link rel="alternate">` tag
@@ -14,7 +16,7 @@ AI pipelines. **$0.30 per 1,000 items**; an empty input runs a free demo.
 - Reads **feeds only** (files published for machine reading) — it does not scrape pages
 - Gentle on servers: usually 1 request per feed (2 when a feed has to be discovered from a page); failed requests are retried once, so at most 4 requests per feed plus redirects. Max 3 in parallel, 0.3 s between requests
 - Safe by design: hosts that resolve to internal addresses (localhost, private ranges, link-local such as 169.254.169.254) are never contacted, including redirect targets; such feeds are reported as `blocked_private_address` and not charged
-- **$0.30 per 1,000 items** (an empty input runs a free demo)
+- **$0.90 per 1,000 items** (an empty input runs a free demo)
 
 ## Use cases
 - Competitor and industry news monitor on a schedule
@@ -37,14 +39,20 @@ AI pipelines. **$0.30 per 1,000 items**; an empty input runs a free demo.
 `content` is added when **Include full content** is on. Author names are not included (no personal data). A per-feed summary (items found, errors, `no_feed_found`) is saved as `SUMMARY`.
 Content belongs to each feed's publisher; check their terms before republishing.
 
+## Pricing
+Pay per event: **$0.0009 per feed item**. Failed runs and the demo are free. Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,500 feed items** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Podcast Episodes from RSS](https://apify.com/ucchiii/podcast-rss-episodes) — find podcasts and list their episodes (audio URL, duration, date) from RSS
-- [Hacker News API](https://apify.com/ucchiii/hacker-news-api) — Hacker News stories, comments and 'Who is hiring' posts via the official APIs
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Job Listings API](https://apify.com/ucchiii/career-site-jobs) — every open job from Greenhouse, Lever, Ashby, Workable, SmartRecruiters and Recruitee career sites
 <!-- more-tools:end -->
 
 ---

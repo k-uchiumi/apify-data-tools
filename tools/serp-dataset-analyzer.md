@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/serp-dataset-analyzer · **Price:** $1.00 per 1,000 rows · free demo with empty input
 
+**Rankings, share of voice, People Also Ask**
+
 **For SEO teams and agencies that already scrape Google results** with `apify/google-search-scraper`. This Actor turns
 that raw dataset into **the tables an SEO team actually reads** — rank tracking, share of voice, People Also Ask —
 with no Google access, no proxies, no scraping. **$1.00 per 1,000 rows written.**
@@ -45,10 +47,13 @@ saved in the key-value store as `SUMMARY`.
 
 ## Pricing
 $1.00 per 1,000 rows written (event `row`). The demo is free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 rows** a month — enough to try it on real data.
 
 ## Notes
 This Actor only processes datasets you already own; it does not access Google. You are responsible for how the
 underlying data was collected and used.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer
@@ -56,7 +61,7 @@ underlying data was collected and used.
 - [SERP Keyword Clustering](https://apify.com/ucchiii/serp-keyword-clustering) — group keywords by shared search results
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 <!-- more-tools:end -->
 

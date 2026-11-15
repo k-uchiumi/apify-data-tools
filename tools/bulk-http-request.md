@@ -1,11 +1,20 @@
-# Bulk HTTP Request: send many API calls from a list
+# Bulk HTTP Request: Send Many API Requests from a List
 
-**Run it on Apify:** https://apify.com/ucchiii/bulk-http-request · **Price:** $1.00 per 1,000 request completeds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/bulk-http-request · **Price:** $1.00 per 1,000 completed requests · free demo with empty input
+
+**Send many API calls from a list**
 
 **For developers, data and ops teams who have a list of API calls to make and don't want to write a loop.** Give it
 URLs (or full requests with method, headers and body) and get one dataset row per request: **status code, response
 headers, JSON or text body, timing and errors**. Use it to call an API for hundreds of IDs, fire webhooks, POST many
-records, check endpoints or HEAD a list of URLs. **$1 per 1,000 completed requests.** Leave the input empty for a free demo.
+records, check endpoints or HEAD a list of URLs. **$1 per 1,000 completed requests; the $5 monthly free credit covers about 5,000 requests.** Leave the input empty for a free demo.
+
+**Output example** (one dataset row per request; shortened):
+
+```json
+{"index": 1, "url": "https://httpbin.org/post", "method": "POST", "statusCode": 200, "ok": true,
+ "headers": {"content-type": "application/json"}, "json": {"json": {"hello": "world"}}, "elapsedMs": 431, "error": null}
+```
 
 ## Use cases
 - Call an API once per ID or record (GET/POST/PUT/PATCH/DELETE) and collect every response in a dataset
@@ -21,6 +30,7 @@ records, check endpoints or HEAD a list of URLs. **$1 per 1,000 completed reques
 - Response headers: `selected`, `all` or `none`
 - Up to 10,000 requests per run. A per-host limit (5 connections, 0.05 s between starts) keeps it polite
 - Run totals are saved as `SUMMARY` in the key-value store
+- Set a maximum cost per run to cap spend: when it is reached the run stops cleanly (status Succeeded), and the status message and `SUMMARY` (`stoppedAtChargeLimit`, `notSent`) say how many requests were not sent
 
 ## Safe by design
 - **Internal addresses are never contacted.** Hostnames are resolved and anything that points to localhost, private ranges, link-local (such as the cloud metadata address 169.254.169.254), IPv6 loopback/unique-local and similar is refused — also at every redirect hop. Such rows have `error: "blocked_private_address"`
@@ -29,6 +39,7 @@ records, check endpoints or HEAD a list of URLs. **$1 per 1,000 completed reques
 
 ## Pricing
 **$0.001 per completed request.** A request is completed when the server answers — any HTTP status counts (a 404 or 500 is charged, a retry is not). Network errors (timeouts, DNS failures), invalid requests and requests blocked by the internal-address guard are **not charged**. Free demo on empty input (not charged).
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 requests** a month — enough to try it on real data.
 
 ## Input
 ```json
@@ -63,14 +74,16 @@ You are responsible for what you send: only call servers and APIs you are allowe
 service and rate limits. The Actor sends exactly the requests you list; it does not crawl or follow links.
 Known limit: the internal-address check happens just before connecting; an attacker-controlled DNS server that changes its answer between the check and the connection (DNS rebinding) is not covered.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
+- [Bulk File Downloader](https://apify.com/ucchiii/bulk-file-downloader) — download files from URL lists or dataset fields into storage, with links, SHA-256 and an optional ZIP
 - [Website Technology Detector](https://apify.com/ucchiii/website-technology-detector) — tech stack of websites in bulk: CMS, frameworks, analytics and tag IDs, CDN, consent tools
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
 - [HTML to Markdown Converter for LLM and RAG](https://apify.com/ucchiii/html-to-markdown) — clean Markdown from URLs, raw HTML or datasets for LLM and RAG
-- [Dataset Transform](https://apify.com/ucchiii/dataset-transform) — flatten, filter, rename and convert any Apify dataset, export CSV / JSON / JSONL with a link
 <!-- more-tools:end -->
 
 ---

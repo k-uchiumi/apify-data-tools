@@ -1,11 +1,13 @@
-# OCR Image to Text: Extract Text from Images & PDFs
+# Tesseract OCR: Image to Text for Images & Scanned PDFs
 
-**Run it on Apify:** https://apify.com/ucchiii/ocr-image-text · **Price:** $4.00 per 1,000 image reads · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/ocr-image-text · **Price:** $2.00 per 1,000 processed images · free demo with empty input
+
+**Extract text from images and scanned PDFs**
 
 **For developers, analysts and AI/RAG pipelines that need the text inside images.** Give it public image URLs (PNG, JPEG, WebP, TIFF, GIF)
 and optionally scanned PDF URLs, and get **one row per image** with the recognized text, language, confidence, word count and image size.
 Runs the open-source **Tesseract OCR** engine inside the Actor: **no external OCR API, no API key, nothing to upload.**
-**$0.004 per image read.** Leave the input empty for a free demo.
+**$0.002 per image read.** Leave the input empty for a free demo.
 
 ## Use cases
 - Turn screenshots, photos of signs, receipts, invoices and slides into searchable text
@@ -57,7 +59,8 @@ With `"outputLayout": "lines"` each row also has `lines`: `[{"text": "Invoice No
 A `SUMMARY` record in the key-value store has the counts (rows, ok, errors, imagesCharged, words).
 
 ## Pricing
-$0.004 per image read (pay per event, `image`). A scanned PDF costs $0.004 per page read. Example: 100 images cost $0.40, a 5-page scanned PDF $0.02.
+$0.002 per image read (pay per event, `image`). A scanned PDF costs $0.002 per page read. Example: 100 images cost $0.20, a 5-page scanned PDF $0.01.
+On the Apify Free plan, the $5 of monthly platform credit covers about **2,500 images** a month — enough to try it on real data.
 Images without any recognized text and failed files are free. For comparison, other OCR Actors in the Apify Store charge roughly $0.003 to $0.005 per image or page.
 
 ## Limits and notes
@@ -67,12 +70,14 @@ Images without any recognized text and failed files are free. For comparison, ot
 - Only the files you list are downloaded; links inside them are not followed. Files behind a login return `http_401` or `http_403`.
 - Only process images you are allowed to download. The text belongs to the rights holder of the image.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [PDF Extractor](https://apify.com/ucchiii/pdf-extractor) — PDF to text, tables and metadata from public PDF URLs, page by page
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 <!-- more-tools:end -->

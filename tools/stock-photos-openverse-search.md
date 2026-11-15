@@ -1,6 +1,8 @@
 # Free Stock Photo Search: Openverse, Pexels, Unsplash
 
-**Run it on Apify:** https://apify.com/ucchiii/stock-photos-openverse-search · **Price:** $1.00 per 1,000 image result returneds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/stock-photos-openverse-search · **Price:** $2.00 per 1,000 image results · free demo with empty input
+
+**Openverse, Pexels and Unsplash in one table, with license and attribution**
 
 **Search openly licensed and free-to-use images and get one flat row per image: image URL, thumbnail, size, creator, license and a ready-to-paste attribution text.** Built for bloggers, marketers, designers, newsletter and presentation makers, and developers who need legally clear images and do not want to read three different license pages.
 
@@ -19,7 +21,7 @@ Example output (shortened, illustrative):
 | pexels | A calm lake | Max Mustermann | Pexels License | Photo by Max Mustermann on Pexels |
 | unsplash | blue lake between mountains | Ann Lee | Unsplash License | Photo by Ann Lee on Unsplash |
 
-**Price: $1 per 1,000 images ($0.001 each).** Example: 10 queries x 10 images = 100 rows = $0.10. Failed requests, searches with no results and the demo are free.
+**Price: $2 per 1,000 images ($0.002 each).** Example: 10 queries x 10 images = 100 rows = $0.20. Failed requests, searches with no results and the demo are free.
 
 ## Input
 - `queries`: one search per line (up to 50)
@@ -47,21 +49,24 @@ Extras: `attributionHtml` (same text with the required links, HTML-escaped), `pr
 
 ## Price
 | Event | Price |
+On the Apify Free plan, the $5 of monthly platform credit covers about **2,500 images** a month — enough to try it on real data.
 |---|---|
-| `image` (one image row written) | $0.001 |
+| `image` (one image row written) | $0.002 |
 
 **Not charged:** failed requests, searches with no results, skipped sources and the empty-input demo.
 
 ## Notes
 Images belong to their creators; the license shown per image is what the source reports. This Actor does not verify licenses and is not legal advice. Pexels and Unsplash are trademarks of their owners; this Actor is not affiliated with them or with Openverse.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
-- [OCR Image to Text](https://apify.com/ucchiii/ocr-image-text) — OCR for image URLs and scanned PDFs with built-in Tesseract: text, confidence and line boxes in 8 languages
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Tesseract OCR](https://apify.com/ucchiii/ocr-image-text) — OCR for image URLs and scanned PDFs with built-in Tesseract: text, confidence and line boxes in 8 languages
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

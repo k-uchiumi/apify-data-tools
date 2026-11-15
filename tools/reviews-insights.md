@@ -2,10 +2,28 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/reviews-insights · **Price:** $5.00 per 1,000 places · free demo with empty input
 
+**Google Maps reviews analyzer: one insight row per place from thousands of reviews**
+
+| placeName | reviewsCount | avgStars | stars 1/2/3/4/5 | last90DaysAvgStars | ownerResponseRate | top positive terms | top negative terms |
+|---|---|---|---|---|---|---|---|
+| Sample Coffee Roasters (fictional) | 6 | 3.5 | 1 / 1 / 0 / 2 / 2 | 4 | 0.667 | great, atmosphere, coffee | coffee, cold, service |
+| Example Ramen House (fictional) | 6 | 3.33 | 1 / 1 / 1 / 1 / 2 | 3.75 | 0.5 | broth, noodle, perfect | long, long wait, overpriced |
+
+*(real output of the free demo on 2026-11-04: 12 fictional reviews of 2 sample places; each row also has the monthly `trend`, owner response days and photo share)*
+
+You bring the reviews: this Actor reads the dataset of a [Google Maps Reviews Scraper](https://apify.com/compass/Google-Maps-Reviews-Scraper)
+(`compass/Google-Maps-Reviews-Scraper`) run and does not scrape Google Maps itself. Pick that run in **Google Maps reviews datasets**
+(the field lists the datasets in your account; no ID to copy).
+
+**Try it:** press **Start** with the input as it is (no dataset picked). You get the free demo above in a few seconds:
+2 place rows built from 12 sample reviews, plus `STATS`. Not charged. The places and reviews are fictional; the demo shows the output format.
+
+**Price:** from **$3.50 per 1,000 places** on Apify's paid plans (the price shown on this page); $5.00 per 1,000 on the free plan.
+One place = one output row; reading reviews is free.
+
 **For local-SEO agencies, multi-location brands and market researchers who scrape Google Maps reviews.** You have
-**thousands of rows nobody has time to read**. This Actor turns the output of a reviews scraper
-(e.g. `compass/Google-Maps-Reviews-Scraper`) into **one insight row per place** — no scraping, no proxies, no LLM, fully
-rule-based and reproducible. **$5 per 1,000 places.**
+**thousands of rows nobody has time to read**. This Actor turns them into **one insight row per place** — no scraping,
+no proxies, no LLM, fully rule-based and reproducible.
 
 For each place you get:
 - **Rating**: review count, average stars, distribution (1–5 stars)
@@ -15,8 +33,6 @@ For each place you get:
 - **Photos**: share of reviews with photos, and the latest review date
 
 **Privacy by design:** reviewer names, IDs and profile URLs are never written to the output, and neither is the review text — only aggregates.
-
-One place = one output row; reading reviews is free. Leave `datasetIds` empty for a free demo on fictional data.
 
 ## Use cases
 - Monthly reputation report per location for a multi-location brand
@@ -33,11 +49,13 @@ One place = one output row; reading reviews is free. Leave `datasetIds` empty fo
 }
 ```
 
+**Few reviews per place?** Google Maps review scrapers often return only about 20 reviews per place. The Actor still works, but with fewer than 20 reviews the trend and top terms are only indicative; such rows have `lowSample: true`.
+
 ## Output (one row per place)
 ```json
 {
   "placeId": "demo-cafe", "placeName": "Sample Coffee Roasters (fictional)", "url": "https://www.example.com/demo-cafe",
-  "reviewsCount": 6, "avgStars": 3.5, "starsDistribution": {"1": 1, "2": 1, "3": 0, "4": 2, "5": 2},
+  "reviewsCount": 6, "lowSample": true, "avgStars": 3.5, "starsDistribution": {"1": 1, "2": 1, "3": 0, "4": 2, "5": 2},
   "last30DaysCount": 3, "last90DaysAvgStars": 3.33,
   "trend": [{"period": "2026-06", "count": 1, "avgStars": 1.0}],
   "ownerResponseRate": 0.667, "avgOwnerResponseDays": 2.8,
@@ -52,13 +70,23 @@ Run statistics (`reviewsRead`, `reviewsSkipped`, `places`, `written`) are saved 
 - Term analysis is simple (lowercase, basic plural folding) and tuned for English text. Translated text (`textTranslated`) is used when the original is empty. Terms appearing in fewer than 2 reviews are omitted.
 - Reviews without a place ID are grouped by URL or place name; reviews without a star rating count toward totals but not rating averages.
 
+## Pricing
+| Event | Free plan | Paid plans (Store discount tiers Bronze / Silver / Gold) |
+|---|---|---|
+| Place (one place with its aggregated review insights) | $5.00 per 1,000 | $4.50 / $4.00 / $3.50 per 1,000 |
+
+The price on this page ("from $3.50") is the Gold tier price. Failed runs and the demo are free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **1,000 places** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Google Maps Leads Cleaner](https://apify.com/ucchiii/maps-leads-cleaner) — dedupe Google Maps scraper results, format phones (E.164), CRM-ready leads
 - [Google Maps Market Analyzer](https://apify.com/ucchiii/maps-market-analyzer) — market and competitor tables from Google Maps scraper datasets
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

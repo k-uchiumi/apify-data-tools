@@ -1,12 +1,14 @@
 # GA4 & GTM Tag Audit: Google Tag Manager Check
 
-**Run it on Apify:** https://apify.com/ucchiii/ga4-gtm-tag-audit · **Price:** $20.00 per 1,000 site auditeds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/ga4-gtm-tag-audit · **Price:** $6.50 per 1,000 audited sites · free demo with empty input
+
+**Google Tag Manager and GA4 audit for a list of URLs**
 
 **For marketers, analysts and agencies who need a quick GA4 audit or GTM audit across many sites.** Paste up to 300 public URLs
 and get **one row per site**: is **GA4** (gtag.js) installed, is a **Google Tag Manager** container present, are there
 **Consent Mode** signals or a consent tool, are there server-side hints, plus a list of **findings with evidence** and a rough
 **maturity level** (`none`, `basic`, `standard`, `advanced`) with the reasons listed.
-**$20 per 1,000 sites audited — failures are free.** Leave the input empty for a free demo.
+**$6.50 per 1,000 sites audited — failures are free.** Leave the input empty for a free demo.
 
 ## How this differs from Website Technology Detector
 | | Website Technology Detector | **GA4 & GTM Tag Audit** (this Actor) |
@@ -14,7 +16,7 @@ and get **one row per site**: is **GA4** (gtag.js) installed, is a **Google Tag 
 | Purpose | Detects which technologies a site uses (230+: CMS, frameworks, CDN, analytics, pixels ...) | Audits the **GA4 / GTM** setup signals of a site |
 | Output | A list of technologies and IDs, no assessment | Detection **plus findings with evidence and a maturity level** |
 | GTM / GA4 | IDs only | IDs, where the tag is loaded (head / body), container contents, consent and server-side signals, duplicates, legacy UA |
-| Price | $2 per 1,000 sites | $20 per 1,000 sites |
+| Price | $1.30 per 1,000 sites | $6.50 per 1,000 sites |
 
 Use the detector when you only need a technology inventory. Use this Actor when you want to know what the GA4 / GTM setup of a
 site looks like and where it may need a closer look.
@@ -86,13 +88,16 @@ signal is not visible in static HTML (for example a consent tool injected at run
 
 ## Price
 | Event | Price |
+On the Apify Free plan, the $5 of monthly platform credit covers about **760 sites** a month — enough to try it on real data.
 |---|---|
-| `site` (one URL fetched and audited, HTTP status below 400) | $0.02 |
+| `site` (one URL fetched and audited, HTTP status below 400) | $0.0065 |
 
 **Not charged:** timeouts, DNS failures, redirect loops, HTTP 4xx/5xx pages, blocked and invalid URLs, and the empty-input demo. A row is charged only after it has been written to the dataset. If you set a maximum cost per run, the run stops when the limit is reached.
 
 ## Notes
 Only request addresses you are allowed to access. Some sites block automated requests; those rows show the HTTP status or error. The findings are signals from public page source, intended as a starting point for a closer look in GA4 and GTM, not a replacement for it.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer

@@ -1,9 +1,11 @@
 # Sitemap URL Extractor: Export All URLs of a Website
 
-**Run it on Apify:** https://apify.com/ucchiii/sitemap-urls · **Price:** $0.25 per 1,000 URLs · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/sitemap-urls · **Price:** $0.35 per 1,000 URLs · free demo with empty input
+
+**All URLs of any website**
 
 **For SEO specialists, site-migration teams and developers who need every URL of a website.** Get the **complete
-list of URLs** published in its sitemaps — no crawling. **$0.25 per 1,000 URLs.**
+list of URLs** published in its sitemaps — no crawling. **$0.35 per 1,000 URLs.**
 
 ## Use cases
 - SEO audit and content inventory of a whole site
@@ -31,14 +33,20 @@ list of URLs** published in its sitemaps — no crawling. **$0.25 per 1,000 URLs
 A per-site summary (sitemap files read, URLs found) is saved as `SUMMARY`. Sites without a sitemap are reported as
 `no_sitemap_found` (or `blocked_private_address`).
 
+## Pricing
+Pay per event: **$0.00035 per url**. Failed runs and the demo are free. Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
+On the Apify Free plan, the $5 of monthly platform credit covers about **14,000 URLs** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
-- [Website Screenshot API](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
+- [Website to Markdown Crawler for RAG and LLMs](https://apify.com/ucchiii/website-markdown-crawler) — crawl a website and get every page as clean Markdown for RAG and LLMs, robots.txt respected, optional chunks
+- [Website Screenshot](https://apify.com/ucchiii/website-screenshot) — screenshots and PDFs of web pages: full page, mobile, element, no cookie banners
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
 - [SERP Analyzer](https://apify.com/ucchiii/serp-dataset-analyzer) — rankings, share of voice and People Also Ask from Google Search scraper datasets
-- [RSS Feed Reader & Aggregator](https://apify.com/ucchiii/rss-feed-reader) — many RSS / Atom feeds merged into one clean article list
 <!-- more-tools:end -->
 
 ---

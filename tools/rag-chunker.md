@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/rag-chunker · **Price:** $0.20 per 1,000 chunks · free demo with empty input
 
+**Split web content into clean chunks for vector databases**
+
 You crawled a website with `apify/rag-web-browser`, `apify/web-fetch` or `apify/website-content-crawler`. Now you need
 **chunks** your vector database can embed. This Actor reads those datasets and writes **one row per chunk** — no
 scraping, no LLM, no embedding API, no proxies.
@@ -72,14 +74,20 @@ index.upsert([(r["chunkId"], embed(r["text"]), {"url": r["url"], "text": r["text
 This Actor only processes datasets you already own; it does not access any website. You are responsible for how the
 underlying content was collected and for your right to reuse it.
 
+## Pricing
+Pay per event: **$0.0002 per chunk**. Failed runs and the demo are free. Store discounts apply automatically: BRONZE −10%, SILVER −20%, GOLD −30%.
+On the Apify Free plan, the $5 of monthly platform credit covers about **25,000 chunks** a month — enough to try it on real data.
+
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
+- [Website to Markdown Crawler for RAG and LLMs](https://apify.com/ucchiii/website-markdown-crawler) — crawl a website and get every page as clean Markdown for RAG and LLMs, robots.txt respected, optional chunks
 - [HTML to Markdown Converter for LLM and RAG](https://apify.com/ucchiii/html-to-markdown) — clean Markdown from URLs, raw HTML or datasets for LLM and RAG
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
 - [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 - [RSS Feed Reader & Aggregator](https://apify.com/ucchiii/rss-feed-reader) — many RSS / Atom feeds merged into one clean article list
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 <!-- more-tools:end -->
 
 ---

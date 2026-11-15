@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/serp-keyword-clustering · **Price:** $2.00 per 1,000 clustered keywords · free demo with empty input
 
+**Group keywords by shared top URLs**
+
 SEO teams and content planners: turn a big keyword list into **topic groups** by checking which keywords Google answers
 with the same URLs, so you write one page per group instead of one per keyword. It reads datasets you already have from
 `apify/google-search-scraper`; no Google access, no proxies, no LLM.
@@ -62,17 +64,20 @@ Key-value store `CLUSTERS`:
 
 ## Pricing
 $2.00 per 1,000 keywords written (event `keyword`, $0.002 each). The demo is free.
+On the Apify Free plan, the $5 of monthly platform credit covers about **2,500 keywords** a month — enough to try it on real data.
 
 ## Notes
 This Actor only processes datasets you already own; it does not access Google. You are responsible for how the
 underlying data was collected and used.
+
+If this Actor saved you time, a rating on the Store helps others find it.
 
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [SERP Analyzer](https://apify.com/ucchiii/serp-dataset-analyzer) — rankings, share of voice and People Also Ask from Google Search scraper datasets
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 <!-- more-tools:end -->
 

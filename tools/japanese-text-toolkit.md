@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/japanese-text-toolkit · **Price:** $0.50 per 1,000 texts · free demo with empty input
 
+**Furigana, romaji, wareki dates, normalization**
+
 **For developers and data teams handling Japanese addresses, names and dates:** this Actor converts texts in bulk to kana readings (furigana), Hepburn romaji, western-calendar dates (from wareki), Arabic numerals (from kanji numerals) and normalized full/half-width characters. **$0.50 per 1,000 texts.**
 
 日本語の住所・氏名・日付などを一括で、ふりがな・ローマ字・和暦→西暦・漢数字→算用数字・全角半角正規化に変換します。**1,000件あたり $0.50。**
@@ -52,6 +54,7 @@ Or process a field of every item in a dataset: `{ "datasetId": "…", "textField
 
 ## Pricing
 **$0.0005 per text** ($0.50 per 1,000). Empty input runs a free demo.
+On the Apify Free plan, the $5 of monthly platform credit covers about **10,000 texts** a month — enough to try it on real data.
 
 ## Limitations
 Readings come from a dictionary (Sudachi, core dictionary). Names, rare words and numbers can have
@@ -74,10 +77,12 @@ without macrons (東京 → toukyou).
 
 注意：読みは辞書（Sudachi）にもとづきます。人名・固有名詞・数字は読みが複数ありうるため、一般的な読みになります。
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 <!-- more-tools:end -->

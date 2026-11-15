@@ -1,8 +1,8 @@
 # HTML to Markdown Converter for LLM and RAG
 
-**Run it on Apify:** https://apify.com/ucchiii/html-to-markdown · **Price:** $1.00 per 1,000 page converteds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/html-to-markdown · **Price:** $1.00 per 1,000 converted pages · free demo with empty input
 
-Turn web pages, raw HTML or a dataset of HTML into **clean Markdown**, one row per document. Built for people who feed
+**Returns clean Markdown, one row per document** (source, title, markdown, wordCount, status), from web pages, raw HTML or a dataset of HTML. Built for people who feed
 documents to an LLM, a RAG pipeline or a docs site and are tired of navigation menus, cookie banners, footers and
 script junk in their text. No browser, no LLM, no API key.
 
@@ -27,7 +27,9 @@ script junk in their text. No browser, no LLM, no API key.
 
 ## Price
 **$1.00 per 1,000 documents** ($0.001 per document converted). 1,000 pages cost $1, 10,000 pages cost $10.
+On the Apify Free plan, the $5 of monthly platform credit covers about **5,000 pages** a month — enough to try it on real data.
 Only successful conversions are charged. Failed fetches (404, timeout, blocked, too large), empty pages and the demo are free.
+Set a maximum cost per run to cap spend: when it is reached the run stops cleanly (status Succeeded), and the status message and STATS (`stoppedAtChargeLimit: true`) say how many inputs were not converted.
 
 ## Input
 ```json
@@ -81,14 +83,16 @@ or `missing_html_field: html`. If a page redirected, `finalUrl` is added. For da
 You are responsible for having the right to fetch and reuse the pages you convert, and for following each site's terms and
 robots.txt. This Actor fetches only the URLs you list and adds no personal data.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
+- [Website to Markdown Crawler for RAG and LLMs](https://apify.com/ucchiii/website-markdown-crawler) — crawl a website and get every page as clean Markdown for RAG and LLMs, robots.txt respected, optional chunks
 - [RAG Chunker](https://apify.com/ucchiii/rag-chunker) — split scraped pages into chunks for RAG and vector stores
 - [Sitemap URL Extractor](https://apify.com/ucchiii/sitemap-urls) — list every URL of a website from its sitemaps
 - [PDF Extractor](https://apify.com/ucchiii/pdf-extractor) — PDF to text, tables and metadata from public PDF URLs, page by page
 - [Bulk HTTP Request](https://apify.com/ucchiii/bulk-http-request) — send many HTTP requests (GET/POST/...) from a list and collect status, headers and body
-- [Bulk URL Status Checker](https://apify.com/ucchiii/url-status-checker) — bulk HTTP status and redirect-chain checker for URL lists
 <!-- more-tools:end -->
 
 ---

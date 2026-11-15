@@ -2,6 +2,8 @@
 
 **Run it on Apify:** https://apify.com/ucchiii/job-market-report · **Price:** $100.00 per 1,000 reports · free demo with empty input
 
+**Salary percentiles, top skills and remote share from job scraper data**
+
 **For recruiters, HR and compensation analysts, career coaches, job-board and newsletter owners, and labour-market
 researchers who already scrape jobs and now have to answer "what does this market actually pay, ask for and allow?"**
 You have thousands of job postings in an Apify dataset but no time to turn them into numbers. This Actor reads the
@@ -91,6 +93,7 @@ all currencies are in `salaryByCurrency`. Run statistics are in the key-value st
 
 ## Pricing
 Pay per event: **$0.10 per report** (one per run; not charged when no jobs could be analyzed) and **$5 per 1,000
+On the Apify Free plan, the $5 of monthly platform credit covers about **50 reports** a month (other events extra) — enough to try it on real data.
 segments** ($0.005 per segment row). A typical run — one report and 30 segments — costs about **$0.25**, whatever the
 number of jobs analyzed. `maxSegments` and the maximum cost per run in Apify cap the spend; the Actor stops cleanly when
 the limit is reached. The demo is free.
@@ -107,12 +110,14 @@ the limit is reached. The demo is free.
   fixed factors; no currency conversion and no cost-of-living adjustment.
 - No personal data is output: no job texts, URLs, applicant or recruiter names. Company names appear only as hiring counts.
 
+If this Actor saved you time, a rating on the Store helps others find it.
+
 <!-- more-tools:start -->
 ## More tools from the same developer
 
 - [Job Postings Normalizer](https://apify.com/ucchiii/job-postings-normalizer) — unify fields, salaries and dates from any job scraper and remove duplicates
 - [Job Listings API](https://apify.com/ucchiii/career-site-jobs) — every open job from Greenhouse, Lever, Ashby, Workable, SmartRecruiters and Recruitee career sites
-- [Dataset Merge & Dedup](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
+- [Remove Duplicates](https://apify.com/ucchiii/dataset-dedup-merge) — merge Apify datasets and remove duplicates by the fields you choose
 - [Google Sheets Export](https://apify.com/ucchiii/google-sheets-export) — export an Apify dataset to Google Sheets
 <!-- more-tools:end -->
 
