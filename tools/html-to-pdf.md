@@ -1,6 +1,6 @@
 # HTML to PDF API: HTML or URL to PDF, A4 / Letter
 
-**Run it on Apify:** https://apify.com/ucchiii/html-to-pdf · **Price:** $6.50 per 1,000 pdfs · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/html-to-pdf · **Price:** $6.50 per 1,000 PDFs · free demo with empty input
 
 **HTML or public URL to PDF, A4 / Letter, header and footer**
 

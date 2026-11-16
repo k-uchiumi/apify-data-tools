@@ -1,6 +1,6 @@
 # URL to PDF: Save Web Pages as PDF, A4 or Letter
 
-**Run it on Apify:** https://apify.com/ucchiii/url-to-pdf · **Price:** $6.50 per 1,000 rendered pdfs · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/url-to-pdf · **Price:** $6.50 per 1,000 rendered PDFs · free demo with empty input
 
 **URL to PDF: save public web pages as PDF files, rendered by a real Chrome browser.**
 

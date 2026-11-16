@@ -1,6 +1,6 @@
 # Brand Name Domain Checker: One Name, 25 TLDs
 
-**Run it on Apify:** https://apify.com/ucchiii/brand-name-domain-checker · **Price:** $1.50 per 1,000 checked name and tlds · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/brand-name-domain-checker · **Price:** $1.50 per 1,000 name-and-TLD checks · free demo with empty input
 
 **Brand Name Domain Checker: type the names you are considering, see which domain endings are free for each one — .com, .io, .ai, .app and 21 more — in one row per name.**
 

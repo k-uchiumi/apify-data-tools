@@ -1,6 +1,6 @@
 # Reviews Analyzer for Trustpilot, Booking, G2 Data
 
-**Run it on Apify:** https://apify.com/ucchiii/review-dataset-analyzer · **Price:** $5.00 per 1,000 business summarys · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/review-dataset-analyzer · **Price:** $5.00 per 1,000 business summaries · free demo with empty input
 
 **Reviews analyzer for Trustpilot, Booking and G2 style data: one summary row per business from thousands of reviews**
 

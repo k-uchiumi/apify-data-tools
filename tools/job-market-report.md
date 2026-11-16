@@ -1,6 +1,6 @@
 # Job Market Report: salary percentiles, skills, remote share
 
-**Run it on Apify:** https://apify.com/ucchiii/job-market-report · **Price:** $100.00 per 1,000 reports · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/job-market-report · **Price:** $100.00 per 1,000 reports + $0.005 per segment · free demo with empty input
 
 **Salary percentiles, top skills and remote share from job scraper data**
 

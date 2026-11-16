@@ -1,6 +1,6 @@
 # Google Ads Keyword Search Volume & CPC (Your DataForSEO Key)
 
-**Run it on Apify:** https://apify.com/ucchiii/keyword-search-volume · **Price:** $1.00 per 1,000 keyword with datas · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/keyword-search-volume · **Price:** $1.00 per 1,000 keywords with data + $0.00002 per looked-up keyword · free demo with empty input
 
 **For SEO and PPC teams who have a keyword list and need numbers to prioritize it.** Get Google Ads monthly search
 volume, CPC, competition, top-of-page bid range and 12-month trends for up to 10,000 keywords per run, in any country

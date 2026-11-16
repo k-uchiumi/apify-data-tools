@@ -1,6 +1,6 @@
 # App Review Analyzer: Ratings by Version & Terms
 
-**Run it on Apify:** https://apify.com/ucchiii/app-review-analyzer · **Price:** $5.00 per 1,000 app summarys · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/app-review-analyzer · **Price:** $5.00 per 1,000 app summaries · free demo with empty input
 
 **App review analyzer: one summary row per app, with ratings by version and complaint terms**
 

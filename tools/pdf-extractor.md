@@ -1,6 +1,6 @@
 # PDF Extractor: PDF to Text, Tables & Metadata
 
-**Run it on Apify:** https://apify.com/ucchiii/pdf-extractor · **Price:** $4.00 per 1,000 extracted pdfs · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/pdf-extractor · **Price:** $4.00 per 1,000 extracted PDFs + $0.0005 per additional page · free demo with empty input
 
 **PDF to text, tables & metadata**
 

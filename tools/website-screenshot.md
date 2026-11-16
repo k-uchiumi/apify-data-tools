@@ -1,6 +1,6 @@
 # Website Screenshot: Full-Page URL Screenshots, PDF
 
-**Run it on Apify:** https://apify.com/ucchiii/website-screenshot · **Price:** $4.00 per 1,000 screenshots · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/website-screenshot · **Price:** $4.00 per 1,000 screenshots + $0.006 per PDF · free demo with empty input
 
 **Full page, PDF, mobile, no cookie banners**
 

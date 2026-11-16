@@ -1,6 +1,6 @@
 # French Companies Search: SIREN, SIRET & SIRENE Lookup
 
-**Run it on Apify:** https://apify.com/ucchiii/france-company-search · **Price:** $5.00 per 1,000 returned companys · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/france-company-search · **Price:** $5.00 per 1,000 returned companies · free demo with empty input
 
 **French companies from the official register**
 

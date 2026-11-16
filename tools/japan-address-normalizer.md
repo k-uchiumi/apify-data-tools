@@ -1,6 +1,6 @@
 # Japan Address Normalizer: 住所 → Prefecture, City, Lat/Lng
 
-**Run it on Apify:** https://apify.com/ucchiii/japan-address-normalizer · **Price:** $1.00 per 1,000 normalized addresss · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/japan-address-normalizer · **Price:** $1.00 per 1,000 normalized addresses · free demo with empty input
 
 **For data teams, e-commerce, logistics and CRM engineers who have messy Japanese addresses** (full-width digits, kanji numerals, 丁目/番地 variants, missing prefecture, 〒 codes, building names stuck on the end) and need clean, comparable fields plus coordinates. This Actor splits every address into prefecture / city / town (町丁目) / the rest, adds latitude and longitude, and tells you how far it could match. **$1 per 1,000 addresses** (only addresses matched to at least a prefecture are charged).
 

@@ -1,6 +1,6 @@
 # IBAN Validator: Bulk IBAN Check, BIC & Bank Name
 
-**Run it on Apify:** https://apify.com/ucchiii/iban-validator · **Price:** $0.10 per 1,000 ibans · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/iban-validator · **Price:** $0.10 per 1,000 IBANs · free demo with empty input
 
 **IBAN validator for whole lists: paste IBANs (or point to a dataset) and get one row per IBAN — valid or not, the exact reason when it is not (length, checksum, country, format), the clean electronic and print formats, country, bank code, BIC and bank name where known, and the SEPA flag.**
 

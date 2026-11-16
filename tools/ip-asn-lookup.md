@@ -1,6 +1,6 @@
 # ASN Lookup: IP to ASN, AS Name & Country in Bulk
 
-**Run it on Apify:** https://apify.com/ucchiii/ip-asn-lookup · **Price:** $0.50 per 1,000 ip address with asns · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/ip-asn-lookup · **Price:** $0.50 per 1,000 IP addresses with ASN · free demo with empty input
 
 **ASN Lookup: IP to ASN, AS name and country for lists of IPv4 / IPv6 addresses and domains**
 

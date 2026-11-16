@@ -1,6 +1,6 @@
 # Favicon Extractor: Bulk Website Icons & Logos
 
-**Run it on Apify:** https://apify.com/ucchiii/favicon-extractor · **Price:** $0.65 per 1,000 site with icons · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/favicon-extractor · **Price:** $0.65 per 1,000 sites with icon · free demo with empty input
 
 **Favicon extractor: get the favicon, Apple touch icon and web app manifest icons of many websites at once — one row per site with every icon URL, its size and type, and the best icon picked for you.**
 

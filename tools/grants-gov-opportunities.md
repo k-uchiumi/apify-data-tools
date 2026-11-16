@@ -1,6 +1,6 @@
 # Grants.gov Federal Grants Search API
 
-**Run it on Apify:** https://apify.com/ucchiii/grants-gov-opportunities · **Price:** $1.50 per 1,000 opportunitys · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/grants-gov-opportunities · **Price:** $1.50 per 1,000 opportunities · free demo with empty input
 
 **For grant writers, nonprofits, universities, small businesses, consultants and funding-research teams who need to find US federal grants without clicking through the Grants.gov search page.**
 Search by keyword, agency, applicant type and category and get **one flat row per opportunity** with deadline, award amounts and a short synopsis. **$1.50 per 1,000 opportunities**.

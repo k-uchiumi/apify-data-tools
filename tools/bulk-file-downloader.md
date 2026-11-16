@@ -1,6 +1,6 @@
 # Bulk File Downloader: URL List to Storage & ZIP
 
-**Run it on Apify:** https://apify.com/ucchiii/bulk-file-downloader · **Price:** $1.30 per 1,000 saved files · free demo with empty input
+**Run it on Apify:** https://apify.com/ucchiii/bulk-file-downloader · **Price:** $1.30 per 1,000 saved files + $0.0005 per saved 10 MB block · free demo with empty input
 
 **Bulk file downloader: give it a list of file URLs (or point it at a field of another Actor's dataset) and every file is saved to Apify storage, with one row per file — a direct download link, content type, size, SHA-256 checksum and status. Optionally, everything is packed into one ZIP.**
 
